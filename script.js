@@ -287,7 +287,13 @@ function renderHeader() {
               class="button button-outline desktop-only"
               href="contact.html"
             >
-              Contact
+              Login
+            </a>
+            <a
+              class="button button-outline desktop-only"
+              href="contact.html"
+            >
+              Register
             </a>
 
             <button

@@ -2196,6 +2196,7 @@ select:focus {
   margin-top: 80px;
   color: #cbd5e1;
   background: #07111f;
+  border-top: 1px solid #1e293b;
 }
 
 .footer-grid {
