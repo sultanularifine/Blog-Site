@@ -1,0 +1,388 @@
+<!-- =========================================================
+     contact.html
+========================================================= -->
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Contact TechBlog"
+  >
+
+  <title>Contact TechBlog</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+
+</head>
+
+<body data-page="contact">
+
+  <div id="siteHeader"></div>
+
+  <main>
+
+    <section class="page-banner">
+
+      <div class="container">
+
+        <nav class="breadcrumb breadcrumb-light">
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <i class="fa-solid fa-chevron-right"></i>
+
+          <span>
+            Contact
+          </span>
+
+        </nav>
+
+        <span class="eyebrow eyebrow-light">
+          Get in Touch
+        </span>
+
+        <h1>
+          Contact TechBlog
+        </h1>
+
+        <p>
+          Have a question, correction, partnership idea
+          or story suggestion? Send our team a message.
+        </p>
+
+      </div>
+
+    </section>
+
+    <section class="container contact-layout section-space">
+
+      <div class="contact-form-card">
+
+        <span class="eyebrow">
+          Send a Message
+        </span>
+
+        <h2>
+          How can we help?
+        </h2>
+
+        <form id="contactForm">
+
+          <div class="form-row">
+
+            <label>
+
+              First Name
+
+              <input
+                name="firstName"
+                type="text"
+                required
+                placeholder="John"
+              >
+
+            </label>
+
+            <label>
+
+              Last Name
+
+              <input
+                name="lastName"
+                type="text"
+                required
+                placeholder="Smith"
+              >
+
+            </label>
+
+          </div>
+
+          <div class="form-row">
+
+            <label>
+
+              Email
+
+              <input
+                name="email"
+                type="email"
+                required
+                placeholder="john@example.com"
+              >
+
+            </label>
+
+            <label>
+
+              Topic
+
+              <select
+                name="topic"
+                required
+              >
+
+                <option value="">
+                  Select a topic
+                </option>
+
+                <option value="general">
+                  General Question
+                </option>
+
+                <option value="correction">
+                  Editorial Correction
+                </option>
+
+                <option value="partnership">
+                  Partnership
+                </option>
+
+                <option value="contributor">
+                  Write for Us
+                </option>
+
+              </select>
+
+            </label>
+
+          </div>
+
+          <label>
+
+            Subject
+
+            <input
+              name="subject"
+              type="text"
+              required
+              placeholder="How can we help?"
+            >
+
+          </label>
+
+          <label>
+
+            Message
+
+            <textarea
+              name="message"
+              rows="7"
+              required
+              placeholder="Write your message here..."
+            ></textarea>
+
+          </label>
+
+          <label class="checkbox-label">
+
+            <input
+              type="checkbox"
+              required
+            >
+
+            I agree to the privacy policy.
+
+          </label>
+
+          <button
+            class="button button-primary"
+            type="submit"
+          >
+            Send Message
+
+            <i class="fa-regular fa-paper-plane"></i>
+          </button>
+
+        </form>
+
+      </div>
+
+      <aside class="contact-info">
+
+        <div class="contact-info-intro">
+
+          <span class="eyebrow eyebrow-light">
+            Contact Information
+          </span>
+
+          <h2>
+            Let’s start a conversation.
+          </h2>
+
+          <p>
+            Our editorial team normally responds
+            within two business days.
+          </p>
+
+        </div>
+
+        <article class="contact-info-item">
+
+          <div class="contact-info-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div>
+
+            <h3>
+              Address
+            </h3>
+
+            <p>
+              120 Innovation Street
+              <br>
+              Berlin, Germany
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="contact-info-item">
+
+          <div class="contact-info-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+
+          <div>
+
+            <h3>
+              Phone
+            </h3>
+
+            <p>
+              <a href="tel:+493012345678">
+                +49 30 1234 5678
+              </a>
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="contact-info-item">
+
+          <div class="contact-info-icon">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+
+          <div>
+
+            <h3>
+              Email
+            </h3>
+
+            <p>
+              <a href="mailto:contact@techblog.com">
+                contact@techblog.com
+              </a>
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="contact-info-item">
+
+          <div class="contact-info-icon">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+
+          <div>
+
+            <h3>
+              Working Hours
+            </h3>
+
+            <p>
+              Monday–Friday
+              <br>
+              09:00–17:00
+            </p>
+
+          </div>
+
+        </article>
+
+        <div class="contact-socials">
+
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#" aria-label="Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+
+          <a href="#" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="#" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+
+        </div>
+
+      </aside>
+
+    </section>
+
+    <section class="container map-section">
+
+      <iframe
+        title="TechBlog office location"
+        src="https://www.google.com/maps?q=Berlin%20Germany&z=12&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+
+    </section>
+
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+</body>
+
+</html>

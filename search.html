@@ -1,0 +1,272 @@
+<!-- =========================================================
+     search.html
+========================================================= -->
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Search TechBlog articles"
+  >
+
+  <title>Search — TechBlog</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+
+</head>
+
+<body data-page="search">
+
+  <div id="siteHeader"></div>
+
+  <main>
+
+    <section class="search-hero">
+
+      <div class="container search-hero-inner">
+
+        <span class="eyebrow eyebrow-light">
+          Find Useful Content
+        </span>
+
+        <h1>
+          Search TechBlog
+        </h1>
+
+        <p>
+          Search tutorials, analysis, guides
+          and practical technology ideas.
+        </p>
+
+        <form
+          id="largeSearchForm"
+          class="large-search"
+        >
+
+          <input
+            id="largeSearchInput"
+            type="search"
+            placeholder="What are you looking for?"
+            aria-label="Search all articles"
+          >
+
+          <button type="submit">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            Search
+
+          </button>
+
+        </form>
+
+        <div class="popular-searches">
+
+          <span>
+            Popular:
+          </span>
+
+          <button
+            type="button"
+            data-search-term="Artificial Intelligence"
+          >
+            Artificial Intelligence
+          </button>
+
+          <button
+            type="button"
+            data-search-term="Laravel"
+          >
+            Laravel
+          </button>
+
+          <button
+            type="button"
+            data-search-term="SEO"
+          >
+            SEO
+          </button>
+
+          <button
+            type="button"
+            data-search-term="Security"
+          >
+            Security
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="container section-space">
+
+      <div class="search-toolbar">
+
+        <div>
+
+          <span class="eyebrow">
+            Search Results
+          </span>
+
+          <h2 id="searchHeading">
+            All Articles
+          </h2>
+
+          <p id="searchCount"></p>
+
+        </div>
+
+        <div class="search-filter-row">
+
+          <select
+            id="searchCategoryFilter"
+            aria-label="Filter search results"
+          >
+
+            <option value="all">
+              All Categories
+            </option>
+
+            <option value="AI">
+              AI
+            </option>
+
+            <option value="Development">
+              Development
+            </option>
+
+            <option value="SEO">
+              SEO
+            </option>
+
+            <option value="Security">
+              Security
+            </option>
+
+            <option value="Business">
+              Business
+            </option>
+
+            <option value="Health">
+              Health
+            </option>
+
+          </select>
+
+          <div
+            class="sort-buttons"
+            role="group"
+            aria-label="Sort results"
+          >
+
+            <button
+              class="active"
+              type="button"
+              data-sort="newest"
+            >
+              Newest
+            </button>
+
+            <button
+              type="button"
+              data-sort="popular"
+            >
+              Popular
+            </button>
+
+            <button
+              type="button"
+              data-sort="oldest"
+            >
+              Oldest
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div
+        id="searchResults"
+        class="search-results"
+      ></div>
+
+      <div
+        id="emptySearch"
+        class="empty-state"
+        hidden
+      >
+
+        <div class="empty-state-icon">
+
+          <i class="fa-regular fa-folder-open"></i>
+
+        </div>
+
+        <h3>
+          No articles found
+        </h3>
+
+        <p>
+          Try a shorter or more general search term.
+        </p>
+
+        <button
+          id="clearSearch"
+          class="button button-primary"
+          type="button"
+        >
+          Clear Search
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+</body>
+
+</html>

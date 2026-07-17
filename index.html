@@ -1,2675 +1,695 @@
+<!-- =========================================================
+     index.html
+========================================================= -->
+
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TechBlog responsive multi-page blog template">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="TechBlog modern responsive technology blog"
+  >
+
   <title>TechBlog — Modern Technology Blog</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"
+  >
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
 
   <link rel="stylesheet" href="style.css">
+
   <script src="script.js" defer></script>
+
 </head>
 
-<body>
+<body data-page="home">
 
-  <!-- Reading Progress Bar -->
-  <div id="readingProgress" class="reading-progress" aria-hidden="true"></div>
+  <div id="siteHeader"></div>
 
-  <!-- =========================
-       HEADER
-  ========================== -->
-  <header class="site-header">
+  <main>
 
-    <div class="topbar">
-      <div class="container topbar-inner">
-
-        <a href="mailto:contact@techblog.com">
-          <i class="fa-regular fa-envelope"></i>
-          contact@techblog.com
-        </a>
-
-        <div class="topbar-socials" aria-label="Social links">
-          <a href="#" aria-label="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-
-          <a href="#" aria-label="Twitter">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-
-          <a href="#" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-
-          <a href="#" aria-label="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-        </div>
-
-      </div>
+    <div class="container ad-slot">
+      728 × 90 Header Advertisement
     </div>
 
-    <div class="main-header">
-      <div class="container header-inner">
+    <section class="container home-hero section-space">
 
-        <!-- Logo -->
-        <a class="logo" href="#home" aria-label="TechBlog home">
-          <span class="logo-mark">T</span>
+      <article class="hero-feature">
 
-          <span>
-            Tech<span>Blog</span>
+        <img
+          src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=85"
+          alt="Modern technology circuit board"
+        >
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+          <span class="badge badge-blue">
+            Technology
           </span>
-        </a>
 
-        <!-- Header Search -->
-        <form id="headerSearchForm" class="header-search" role="search">
-          <label class="sr-only" for="headerSearchInput">
-            Search articles
-          </label>
+          <h1>
+            Future of Artificial Intelligence in
+            Modern Web Development
+          </h1>
 
-          <input id="headerSearchInput" type="search" placeholder="Search articles...">
+          <p>
+            Explore how artificial intelligence is transforming
+            development, automation, search optimization and
+            modern digital products.
+          </p>
 
-          <button type="submit" aria-label="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
+          <div class="post-meta post-meta-light">
 
-        <!-- Header Actions -->
-        <div class="header-actions">
-
-          <button id="themeToggle" class="icon-button" type="button" aria-label="Toggle dark mode">
-            <i class="fa-regular fa-moon"></i>
-          </button>
-
-          <a class="button button-outline desktop-only" href="#contact">
-            Login
-          </a>
-          <a class="button button-outline desktop-only" href="#contact">
-            Register
-          </a>
-
-          <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav id="mainNav" class="main-nav" aria-label="Primary navigation">
-      <div class="container nav-inner">
-
-        <a href="#home" data-route-link>Home</a>
-        <a href="#category" data-route-link>Technology</a>
-        <a href="#category" data-route-link>Business</a>
-        <a href="#category" data-route-link>SEO</a>
-        <a href="#category" data-route-link>AI</a>
-        <a href="#about" data-route-link>About</a>
-        <a href="#contact" data-route-link>Contact</a>
-
-        <a href="#search" data-route-link class="mobile-search-link">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          Search
-        </a>
-
-      </div>
-    </nav>
-
-  </header>
-
-  <!-- =========================
-       WEBSITE PAGES
-  ========================== -->
-  <main id="app">
-
-    <!-- =========================
-         HOME PAGE
-    ========================== -->
-    <section id="page-home" class="page active" data-page="home">
-
-      <div class="container ad-slot ad-slot-top">
-        728 × 90 Header Advertisement
-      </div>
-
-      <!-- Home Hero -->
-      <section class="container home-hero section-space">
-
-        <article class="hero-feature">
-
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=85"
-            alt="Modern technology circuit board">
-
-          <div class="hero-overlay"></div>
-
-          <div class="hero-content">
-
-            <span class="badge badge-blue">
-              Technology
+            <span>
+              <i class="fa-regular fa-user"></i>
+              John Smith
             </span>
 
-            <h1>
-              Future of Artificial Intelligence in
-              Modern Web Development
-            </h1>
+            <span>
+              <i class="fa-regular fa-calendar"></i>
+              July 18, 2026
+            </span>
 
-            <p>
-              Explore how AI is transforming development,
-              automation, search optimization and modern
-              digital products.
-            </p>
+            <span>
+              <i class="fa-regular fa-clock"></i>
+              8 min read
+            </span>
 
-            <div class="post-meta post-meta-light">
+          </div>
 
-              <span>
-                <i class="fa-regular fa-user"></i>
-                John Smith
-              </span>
+          <a
+            class="button button-primary"
+            href="single-blog.html"
+          >
+            Read Article
 
-              <span>
-                <i class="fa-regular fa-calendar"></i>
-                July 18, 2026
-              </span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
 
-              <span>
-                <i class="fa-regular fa-clock"></i>
-                8 min read
-              </span>
+        </div>
 
-            </div>
+      </article>
 
-            <a class="button button-primary" href="#blog">
-              Read Article
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
+      <div class="hero-side-grid">
+
+        <article class="mini-post-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80"
+            alt="Health professional"
+          >
+
+          <div>
+
+            <span class="badge badge-green">
+              Health
+            </span>
+
+            <h3>
+              <a href="single-blog.html">
+                Healthy Lifestyle Tips for Developers
+              </a>
+            </h3>
+
+            <small>5 min read</small>
 
           </div>
 
         </article>
 
-        <!-- Hero Side Posts -->
-        <div class="hero-side-grid">
+        <article class="mini-post-card">
 
-          <article class="mini-post-card">
+          <img
+            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80"
+            alt="Business meeting"
+          >
 
-            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80"
-              alt="Health professional">
+          <div>
 
-            <div>
+            <span class="badge badge-blue">
+              Business
+            </span>
 
-              <span class="badge badge-green">
-                Health
-              </span>
+            <h3>
+              <a href="single-blog.html">
+                10 Startup Ideas That Will Dominate
+              </a>
+            </h3>
 
-              <h3>
-                <a href="#blog">
-                  Healthy Lifestyle Tips for Developers
-                </a>
-              </h3>
+            <small>6 min read</small>
 
-              <small>5 min read</small>
+          </div>
 
-            </div>
+        </article>
 
-          </article>
+        <article class="mini-post-card">
 
-          <article class="mini-post-card">
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+            alt="SEO analytics"
+          >
 
-            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80"
-              alt="Business meeting">
+          <div>
 
-            <div>
+            <span class="badge badge-purple">
+              SEO
+            </span>
 
-              <span class="badge badge-blue">
-                Business
-              </span>
+            <h3>
+              <a href="single-blog.html">
+                Complete On-Page SEO Checklist
+              </a>
+            </h3>
 
-              <h3>
-                <a href="#blog">
-                  10 Startup Ideas That Will Dominate
-                </a>
-              </h3>
+            <small>7 min read</small>
 
-              <small>6 min read</small>
+          </div>
 
-            </div>
+        </article>
 
-          </article>
+      </div>
 
-          <article class="mini-post-card">
+    </section>
 
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
-              alt="SEO analytics laptop">
+    <section class="container section-space">
 
-            <div>
+      <div class="section-heading">
 
-              <span class="badge badge-purple">
-                SEO
-              </span>
+        <div>
 
-              <h3>
-                <a href="#blog">
-                  Complete On-Page SEO Checklist
-                </a>
-              </h3>
+          <span class="eyebrow">
+            Trending
+          </span>
 
-              <small>7 min read</small>
+          <h2>Popular Articles</h2>
 
-            </div>
-
-          </article>
+          <p>
+            Discover the stories readers are enjoying today.
+          </p>
 
         </div>
 
-      </section>
+        <a
+          class="button button-outline"
+          href="category.html"
+        >
+          View All
+        </a>
 
-      <!-- Trending Posts -->
-      <section class="container section-space">
+      </div>
+
+      <div class="post-grid post-grid-4">
+
+        <article class="post-card">
+
+          <a
+            class="post-card-image"
+            href="single-blog.html"
+          >
+            <img
+              src="https://picsum.photos/700/470?random=101"
+              alt="Laravel development"
+            >
+          </a>
+
+          <div class="post-card-body">
+
+            <span class="badge badge-blue">
+              Technology
+            </span>
+
+            <h3>
+              <a href="single-blog.html">
+                Laravel Complete Beginner Guide
+              </a>
+            </h3>
+
+            <p>
+              Build secure and scalable applications
+              with practical examples.
+            </p>
+
+            <div class="card-meta">
+              <span>Jul 18, 2026</span>
+              <span>8 min</span>
+            </div>
+
+          </div>
+
+        </article>
+
+        <article class="post-card">
+
+          <a
+            class="post-card-image"
+            href="single-blog.html"
+          >
+            <img
+              src="https://picsum.photos/700/470?random=102"
+              alt="Remote business team"
+            >
+          </a>
+
+          <div class="post-card-body">
+
+            <span class="badge badge-green">
+              Business
+            </span>
+
+            <h3>
+              <a href="single-blog.html">
+                Build a Productive Remote Team
+              </a>
+            </h3>
+
+            <p>
+              Simple systems that help distributed
+              teams communicate better.
+            </p>
+
+            <div class="card-meta">
+              <span>Jul 17, 2026</span>
+              <span>6 min</span>
+            </div>
+
+          </div>
+
+        </article>
+
+        <article class="post-card">
+
+          <a
+            class="post-card-image"
+            href="single-blog.html"
+          >
+            <img
+              src="https://picsum.photos/700/470?random=103"
+              alt="SEO analytics chart"
+            >
+          </a>
+
+          <div class="post-card-body">
+
+            <span class="badge badge-purple">
+              SEO
+            </span>
+
+            <h3>
+              <a href="single-blog.html">
+                Google Ranking Factors Explained
+              </a>
+            </h3>
+
+            <p>
+              Focus on the signals that make
+              content genuinely useful.
+            </p>
+
+            <div class="card-meta">
+              <span>Jul 16, 2026</span>
+              <span>9 min</span>
+            </div>
+
+          </div>
+
+        </article>
+
+        <article class="post-card">
+
+          <a
+            class="post-card-image"
+            href="single-blog.html"
+          >
+            <img
+              src="https://picsum.photos/700/470?random=104"
+              alt="Artificial intelligence"
+            >
+          </a>
+
+          <div class="post-card-body">
+
+            <span class="badge badge-red">
+              AI
+            </span>
+
+            <h3>
+              <a href="single-blog.html">
+                Top AI Tools Every Creator Needs
+              </a>
+            </h3>
+
+            <p>
+              Save time while improving research,
+              writing and production.
+            </p>
+
+            <div class="card-meta">
+              <span>Jul 15, 2026</span>
+              <span>5 min</span>
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <div class="container ad-slot">
+      Responsive Google Advertisement
+    </div>
+
+    <section class="container home-content-layout section-space">
+
+      <div>
 
         <div class="section-heading">
 
           <div>
 
             <span class="eyebrow">
-              Trending
+              Latest
             </span>
 
-            <h2>Popular Articles</h2>
+            <h2>Latest Articles</h2>
 
             <p>
-              Discover the stories readers are enjoying today.
+              Fresh tutorials, news and technology updates.
             </p>
 
           </div>
 
-          <a class="button button-outline" href="#category">
-            View All
-          </a>
-
         </div>
 
-        <div class="post-grid post-grid-4">
+        <div class="latest-list">
 
-          <article class="post-card">
+          <article class="horizontal-post">
 
-            <a href="#blog">
-              <img src="https://picsum.photos/700/470?random=101" alt="Laravel development">
+            <a href="single-blog.html">
+
+              <img
+                src="https://picsum.photos/700/500?random=111"
+                alt="PHP development"
+              >
+
             </a>
 
-            <div class="post-card-body">
+            <div>
 
               <span class="badge badge-blue">
                 Technology
               </span>
 
               <h3>
-                <a href="#blog">
-                  Laravel Complete Beginner Guide
+                <a href="single-blog.html">
+                  Why Laravel Is Still a Leading PHP Framework
                 </a>
               </h3>
 
               <p>
-                Build secure and scalable applications
-                with practical examples.
+                Elegant syntax, strong security and a mature
+                ecosystem continue to make Laravel an
+                excellent development choice.
               </p>
 
-              <div class="card-meta">
-                <span>Jul 18</span>
-                <span>8 min</span>
+              <div class="post-meta">
+                <span>John Smith</span>
+                <span>8 min read</span>
               </div>
+
+              <a
+                class="button button-primary"
+                href="single-blog.html"
+              >
+                Read More
+              </a>
 
             </div>
 
           </article>
 
-          <article class="post-card">
+          <article class="horizontal-post">
 
-            <a href="#blog">
-              <img src="https://picsum.photos/700/470?random=102" alt="Remote work desk">
+            <a href="single-blog.html">
+
+              <img
+                src="https://picsum.photos/700/500?random=112"
+                alt="AI workstation"
+              >
+
             </a>
 
-            <div class="post-card-body">
-
-              <span class="badge badge-green">
-                Business
-              </span>
-
-              <h3>
-                <a href="#blog">
-                  Build a Productive Remote Team
-                </a>
-              </h3>
-
-              <p>
-                Simple systems that help distributed
-                teams communicate better.
-              </p>
-
-              <div class="card-meta">
-                <span>Jul 17</span>
-                <span>6 min</span>
-              </div>
-
-            </div>
-
-          </article>
-
-          <article class="post-card">
-
-            <a href="#blog">
-              <img src="https://picsum.photos/700/470?random=103" alt="SEO chart">
-            </a>
-
-            <div class="post-card-body">
-
-              <span class="badge badge-purple">
-                SEO
-              </span>
-
-              <h3>
-                <a href="#blog">
-                  Google Ranking Factors Explained
-                </a>
-              </h3>
-
-              <p>
-                Focus on the signals that make
-                content genuinely useful.
-              </p>
-
-              <div class="card-meta">
-                <span>Jul 16</span>
-                <span>9 min</span>
-              </div>
-
-            </div>
-
-          </article>
-
-          <article class="post-card">
-
-            <a href="#blog">
-              <img src="https://picsum.photos/700/470?random=104" alt="Artificial intelligence concept">
-            </a>
-
-            <div class="post-card-body">
+            <div>
 
               <span class="badge badge-red">
                 AI
               </span>
 
               <h3>
-                <a href="#blog">
-                  Top AI Tools Every Creator Needs
+                <a href="single-blog.html">
+                  How Generative AI Changes Content Workflows
                 </a>
               </h3>
 
               <p>
-                Save time while improving research,
-                writing and production.
+                Use AI as a structured assistant while
+                keeping human judgment at the center.
               </p>
 
-              <div class="card-meta">
-                <span>Jul 15</span>
-                <span>5 min</span>
+              <div class="post-meta">
+                <span>Sarah Lee</span>
+                <span>7 min read</span>
               </div>
+
+              <a
+                class="button button-primary"
+                href="single-blog.html"
+              >
+                Read More
+              </a>
 
             </div>
 
           </article>
 
-        </div>
+          <article class="horizontal-post">
 
-      </section>
+            <a href="single-blog.html">
 
-      <div class="container ad-slot">
-        Responsive Advertisement
-      </div>
+              <img
+                src="https://picsum.photos/700/500?random=113"
+                alt="SEO dashboard"
+              >
 
-      <!-- Latest Articles -->
-      <section class="container section-space home-content-layout">
-
-        <div>
-
-          <div class="section-heading compact">
+            </a>
 
             <div>
 
-              <span class="eyebrow">
-                Latest
+              <span class="badge badge-purple">
+                SEO
               </span>
-
-              <h2>Latest Articles</h2>
-
-            </div>
-
-          </div>
-
-          <div class="latest-list">
-
-            <article class="horizontal-post">
-
-              <a href="#blog">
-
-                <img src="https://picsum.photos/700/500?random=111" alt="PHP code">
-
-              </a>
-
-              <div>
-
-                <span class="badge badge-blue">
-                  Technology
-                </span>
-
-                <h3>
-                  <a href="#blog">
-                    Why Laravel Is Still a Leading PHP Framework
-                  </a>
-                </h3>
-
-                <p>
-                  Elegant syntax, strong security and a mature
-                  ecosystem continue to make Laravel an
-                  excellent choice.
-                </p>
-
-                <div class="post-meta">
-                  <span>John Smith</span>
-                  <span>8 min read</span>
-                </div>
-
-              </div>
-
-            </article>
-
-            <article class="horizontal-post">
-
-              <a href="#blog">
-
-                <img src="https://picsum.photos/700/500?random=112" alt="AI workstation">
-
-              </a>
-
-              <div>
-
-                <span class="badge badge-red">
-                  AI
-                </span>
-
-                <h3>
-                  <a href="#blog">
-                    How Generative AI Changes Content Workflows
-                  </a>
-                </h3>
-
-                <p>
-                  Use AI as a structured assistant while keeping
-                  human judgment at the center of your process.
-                </p>
-
-                <div class="post-meta">
-                  <span>Sarah Lee</span>
-                  <span>7 min read</span>
-                </div>
-
-              </div>
-
-            </article>
-
-            <article class="horizontal-post">
-
-              <a href="#blog">
-
-                <img src="https://picsum.photos/700/500?random=113" alt="Analytics dashboard">
-
-              </a>
-
-              <div>
-
-                <span class="badge badge-purple">
-                  SEO
-                </span>
-
-                <h3>
-                  <a href="#blog">
-                    A Practical Technical SEO Audit Workflow
-                  </a>
-                </h3>
-
-                <p>
-                  Identify crawl, indexing, speed and content
-                  problems in a repeatable order.
-                </p>
-
-                <div class="post-meta">
-                  <span>Michael Chen</span>
-                  <span>9 min read</span>
-                </div>
-
-              </div>
-
-            </article>
-
-          </div>
-
-        </div>
-
-        <aside class="home-sidebar">
-
-          <div class="sidebar-card">
-
-            <h3>Newsletter</h3>
-
-            <p>
-              Get the best technology and SEO articles every week.
-            </p>
-
-            <form class="newsletter-form">
-
-              <input type="email" placeholder="Email address" required>
-
-              <button class="button button-primary" type="submit">
-                Subscribe
-              </button>
-
-            </form>
-
-          </div>
-
-          <div class="sidebar-card">
-
-            <h3>Popular Topics</h3>
-
-            <div class="tag-cloud">
-
-              <a href="#category">AI</a>
-              <a href="#category">Laravel</a>
-              <a href="#category">SEO</a>
-              <a href="#category">Business</a>
-              <a href="#category">WordPress</a>
-              <a href="#category">Security</a>
-
-            </div>
-
-          </div>
-
-        </aside>
-
-      </section>
-
-    </section>
-
-    <!-- =========================
-         SINGLE BLOG PAGE
-    ========================== -->
-    <section id="page-blog" class="page" data-page="blog">
-
-      <!-- Breadcrumb -->
-      <div class="container blog-breadcrumb breadcrumb" aria-label="Breadcrumb">
-
-        <a href="#home">Home</a>
-
-        <i class="fa-solid fa-chevron-right"></i>
-
-        <a href="#category">Technology</a>
-
-        <i class="fa-solid fa-chevron-right"></i>
-
-        <span>AI in Web Development</span>
-
-      </div>
-
-      <!-- Floating Share -->
-      <div class="floating-share" aria-label="Share article">
-
-        <span>Share</span>
-
-        <button type="button" data-share="facebook" aria-label="Share on Facebook">
-          <i class="fa-brands fa-facebook-f"></i>
-        </button>
-
-        <button type="button" data-share="twitter" aria-label="Share on Twitter">
-          <i class="fa-brands fa-x-twitter"></i>
-        </button>
-
-        <button type="button" data-share="linkedin" aria-label="Share on LinkedIn">
-          <i class="fa-brands fa-linkedin-in"></i>
-        </button>
-
-        <button type="button" data-share="copy" aria-label="Copy link">
-          <i class="fa-solid fa-link"></i>
-        </button>
-
-      </div>
-
-      <div class="container blog-layout section-space-sm">
-
-        <!-- Blog Content 850px -->
-        <article id="articleContent" class="blog-article">
-
-          <header class="article-header">
-
-            <span class="badge badge-blue">
-              Technology
-            </span>
-
-            <h1>
-              Future of Artificial Intelligence
-              in Modern Web Development
-            </h1>
-
-            <p class="article-intro">
-              Artificial intelligence is moving from an optional
-              experiment to a practical layer inside modern
-              development workflows.
-            </p>
-
-            <div class="author-row">
-
-              <img src="https://i.pravatar.cc/120?img=12" alt="John Smith avatar">
-
-              <div>
-
-                <strong>John Smith</strong>
-
-                <span>
-                  Senior Technology Writer
-                </span>
-
-              </div>
-
-              <div class="article-meta">
-
-                <span>
-                  <i class="fa-regular fa-calendar"></i>
-                  July 18, 2026
-                </span>
-
-                <span>
-                  <i class="fa-regular fa-clock"></i>
-                  8 min read
-                </span>
-
-              </div>
-
-            </div>
-
-          </header>
-
-          <!-- Featured Image -->
-          <figure class="featured-image">
-
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=88"
-              alt="Circuit board representing artificial intelligence">
-
-            <figcaption>
-              AI is becoming a practical part of everyday
-              development workflows.
-            </figcaption>
-
-          </figure>
-
-          <!-- Mobile TOC -->
-          <nav class="mobile-toc toc-card" aria-label="Article contents">
-
-            <h3>
-              <i class="fa-solid fa-list"></i>
-              Contents
-            </h3>
-
-            <ol>
-
-              <li>
-                <a href="#article-section-1">
-                  How AI changes development
-                </a>
-              </li>
-
-              <li>
-                <a href="#article-section-2">
-                  Practical use cases
-                </a>
-              </li>
-
-              <li>
-                <a href="#article-section-3">
-                  Building responsibly
-                </a>
-              </li>
-
-            </ol>
-
-          </nav>
-
-          <!-- Article -->
-          <div class="article-body">
-
-            <p class="lead">
-              The most valuable use of AI is not replacing
-              developers. It is reducing repetitive work,
-              accelerating discovery and helping teams make
-              better-informed decisions.
-            </p>
-
-            <h2 id="article-section-1">
-              1. How AI Changes Modern Development
-            </h2>
-
-            <p>
-              Modern web teams use AI to explore unfamiliar
-              codebases, draft repetitive components, summarize
-              documentation and identify likely causes of bugs.
-              These capabilities shorten the distance between
-              a question and a useful first answer.
-            </p>
-
-            <p>
-              However, generated output still requires review.
-              Developers must validate architecture, security,
-              accessibility and business logic before code
-              reaches production.
-            </p>
-
-            <blockquote>
-              AI is most effective when it improves the
-              developer’s judgment instead of attempting
-              to replace it.
-            </blockquote>
-
-            <h3>
-              Faster research and prototyping
-            </h3>
-
-            <p>
-              A developer can describe a feature, compare
-              implementation options and generate a rough
-              prototype within minutes. The prototype is not
-              the finished product, but it helps a team test
-              assumptions earlier.
-            </p>
-
-            <ul>
-              <li>
-                Explain unfamiliar functions and dependencies.
-              </li>
-
-              <li>
-                Generate starter tests and documentation.
-              </li>
-
-              <li>
-                Suggest alternative approaches to a
-                technical problem.
-              </li>
-
-              <li>
-                Transform repetitive data or markup.
-              </li>
-            </ul>
-
-            <h2 id="article-section-2">
-              2. Practical AI Use Cases
-            </h2>
-
-            <p>
-              Strong use cases have clear inputs, verifiable
-              outputs and a human review step. This makes AI
-              especially useful for structured tasks rather
-              than vague requests.
-            </p>
-
-            <div class="article-callout">
-
-              <i class="fa-solid fa-lightbulb"></i>
-
-              <div>
-
-                <strong>Practical tip</strong>
-
-                <p>
-                  Give the model relevant context, constraints,
-                  examples and an exact output format. Better
-                  instructions usually create more useful results.
-                </p>
-
-              </div>
-
-            </div>
-
-            <h3>
-              Development and quality assurance
-            </h3>
-
-            <p>
-              Teams can use AI to draft unit tests, identify
-              edge cases, explain error messages and review
-              common accessibility problems. A reviewer should
-              still confirm that tests represent real requirements.
-            </p>
-
-            <h3>
-              Content and search optimization
-            </h3>
-
-            <p>
-              AI can organize research, create content briefs,
-              improve internal linking ideas and identify gaps
-              in an article. Original expertise, accurate sources
-              and clear editing remain essential.
-            </p>
-
-            <pre><code>// Example: validate AI output before using it
-const result = await generateSuggestion(input);
-
-const verified = validateAgainstRequirements(result);
-
-if (!verified.ok) {
-  throw new Error("Generated output needs review");
-}</code></pre>
-
-            <h2 id="article-section-3">
-              3. Building Responsibly With AI
-            </h2>
-
-            <p>
-              Responsible adoption requires privacy rules,
-              security review and clear ownership. Sensitive
-              customer information, credentials and proprietary
-              code should never be shared with an unapproved service.
-            </p>
-
-            <p>
-              Teams should document where AI is used, which
-              outputs require approval and how mistakes are
-              reported. This keeps the workflow transparent
-              and improves quality over time.
-            </p>
-
-            <ol>
-              <li>
-                Define acceptable and prohibited use.
-              </li>
-
-              <li>
-                Protect confidential data.
-              </li>
-
-              <li>
-                Review generated code and claims.
-              </li>
-
-              <li>
-                Measure whether the workflow truly saves time.
-              </li>
-            </ol>
-
-            <!-- FAQ -->
-            <section class="faq-section" aria-labelledby="faqTitle">
-
-              <div class="section-heading compact">
-
-                <div>
-
-                  <span class="eyebrow">
-                    FAQ
-                  </span>
-
-                  <h2 id="faqTitle">
-                    Frequently Asked Questions
-                  </h2>
-
-                </div>
-
-              </div>
-
-              <div class="faq-list">
-
-                <article class="faq-item">
-
-                  <button type="button" aria-expanded="false">
-
-                    <span>
-                      Will AI replace web developers?
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                  </button>
-
-                  <div class="faq-answer">
-
-                    <p>
-                      AI will automate parts of the workflow,
-                      but production systems still need human
-                      judgment, communication, architecture,
-                      security and accountability.
-                    </p>
-
-                  </div>
-
-                </article>
-
-                <article class="faq-item">
-
-                  <button type="button" aria-expanded="false">
-
-                    <span>
-                      Is AI-generated code safe to use?
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                  </button>
-
-                  <div class="faq-answer">
-
-                    <p>
-                      It can be useful as a draft, but it should
-                      be reviewed, tested and scanned just like
-                      code written by any contributor.
-                    </p>
-
-                  </div>
-
-                </article>
-
-                <article class="faq-item">
-
-                  <button type="button" aria-expanded="false">
-
-                    <span>
-                      What should beginners learn first?
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                  </button>
-
-                  <div class="faq-answer">
-
-                    <p>
-                      Learn HTML, CSS, JavaScript, debugging,
-                      version control and basic web architecture.
-                      These foundations help you evaluate AI
-                      output correctly.
-                    </p>
-
-                  </div>
-
-                </article>
-
-              </div>
-
-            </section>
-
-            <!-- Bottom Share -->
-            <div class="article-share-bottom">
-
-              <strong>
-                Share this article
-              </strong>
-
-              <div>
-
-                <button data-share="facebook">
-                  <i class="fa-brands fa-facebook-f"></i>
-                  Facebook
-                </button>
-
-                <button data-share="twitter">
-                  <i class="fa-brands fa-x-twitter"></i>
-                  Twitter
-                </button>
-
-                <button data-share="linkedin">
-                  <i class="fa-brands fa-linkedin-in"></i>
-                  LinkedIn
-                </button>
-
-                <button data-share="copy">
-                  <i class="fa-solid fa-link"></i>
-                  Copy
-                </button>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <!-- Related Posts -->
-          <section class="related-section">
-
-            <div class="section-heading compact">
-
-              <div>
-
-                <span class="eyebrow">
-                  Keep Reading
-                </span>
-
-                <h2>Related Posts</h2>
-
-              </div>
-
-            </div>
-
-            <div class="related-grid">
-
-              <article class="related-card">
-
-                <a href="#blog">
-
-                  <img src="https://picsum.photos/700/470?random=201" alt="AI coding">
-
-                </a>
-
-                <div>
-
-                  <span>AI</span>
-
-                  <h3>
-                    <a href="#blog">
-                      Seven AI Tools for Faster Coding
-                    </a>
-                  </h3>
-
-                  <small>
-                    <i class="fa-regular fa-comment"></i>
-                    18 comments
-                  </small>
-
-                </div>
-
-              </article>
-
-              <article class="related-card">
-
-                <a href="#blog">
-
-                  <img src="https://picsum.photos/700/470?random=202" alt="Web application">
-
-                </a>
-
-                <div>
-
-                  <span>Development</span>
-
-                  <h3>
-                    <a href="#blog">
-                      How to Plan a Scalable Web App
-                    </a>
-                  </h3>
-
-                  <small>
-                    <i class="fa-regular fa-comment"></i>
-                    12 comments
-                  </small>
-
-                </div>
-
-              </article>
-
-              <article class="related-card">
-
-                <a href="#blog">
-
-                  <img src="https://picsum.photos/700/470?random=203" alt="Cyber security">
-
-                </a>
-
-                <div>
-
-                  <span>Security</span>
-
-                  <h3>
-                    <a href="#blog">
-                      Security Checklist for Modern Teams
-                    </a>
-                  </h3>
-
-                  <small>
-                    <i class="fa-regular fa-comment"></i>
-                    9 comments
-                  </small>
-
-                </div>
-
-              </article>
-
-            </div>
-
-          </section>
-
-          <!-- Comments -->
-          <section class="comments-section" aria-labelledby="commentsTitle">
-
-            <div class="comments-heading">
-
-              <div>
-
-                <span class="eyebrow">
-                  Discussion
-                </span>
-
-                <h2 id="commentsTitle">
-                  4 Comments
-                </h2>
-
-              </div>
-
-              <button class="button button-outline" type="button" id="jumpCommentForm">
-                Leave a Comment
-              </button>
-
-            </div>
-
-            <div class="comment-list">
-
-              <article class="comment">
-
-                <img src="https://i.pravatar.cc/100?img=32" alt="Emma avatar">
-
-                <div class="comment-content">
-
-                  <div class="comment-top">
-
-                    <div>
-
-                      <strong>Emma Wilson</strong>
-
-                      <time>
-                        2 hours ago
-                      </time>
-
-                    </div>
-
-                    <button class="comment-menu" aria-label="Comment menu">
-                      <i class="fa-solid fa-ellipsis"></i>
-                    </button>
-
-                  </div>
-
-                  <p>
-                    The distinction between using AI as a
-                    draft and treating it as a final answer
-                    is very important. Great explanation.
-                  </p>
-
-                  <div class="comment-actions">
-
-                    <button class="like-button">
-
-                      <i class="fa-regular fa-thumbs-up"></i>
-
-                      Like
-
-                      <span>12</span>
-
-                    </button>
-
-                    <button class="reply-button">
-
-                      <i class="fa-solid fa-reply"></i>
-
-                      Reply
-
-                    </button>
-
-                  </div>
-
-                </div>
-
-              </article>
-
-              <article class="comment reply-comment">
-
-                <img src="https://i.pravatar.cc/100?img=12" alt="John avatar">
-
-                <div class="comment-content">
-
-                  <div class="comment-top">
-
-                    <div>
-
-                      <strong>
-                        John Smith
-
-                        <span class="author-badge">
-                          Author
-                        </span>
-
-                      </strong>
-
-                      <time>
-                        1 hour ago
-                      </time>
-
-                    </div>
-
-                  </div>
-
-                  <p>
-                    Exactly. Review and accountability are
-                    what turn a fast draft into reliable work.
-                  </p>
-
-                  <div class="comment-actions">
-
-                    <button class="like-button">
-
-                      <i class="fa-regular fa-thumbs-up"></i>
-
-                      Like
-
-                      <span>5</span>
-
-                    </button>
-
-                    <button class="reply-button">
-
-                      <i class="fa-solid fa-reply"></i>
-
-                      Reply
-
-                    </button>
-
-                  </div>
-
-                </div>
-
-              </article>
-
-              <article class="comment">
-
-                <img src="https://i.pravatar.cc/100?img=15" alt="David avatar">
-
-                <div class="comment-content">
-
-                  <div class="comment-top">
-
-                    <div>
-
-                      <strong>David Kim</strong>
-
-                      <time>
-                        Yesterday
-                      </time>
-
-                    </div>
-
-                  </div>
-
-                  <p>
-                    I would also add that teams need an
-                    approved-tool list before sharing any
-                    code or client data.
-                  </p>
-
-                  <div class="comment-actions">
-
-                    <button class="like-button">
-
-                      <i class="fa-regular fa-thumbs-up"></i>
-
-                      Like
-
-                      <span>8</span>
-
-                    </button>
-
-                    <button class="reply-button">
-
-                      <i class="fa-solid fa-reply"></i>
-
-                      Reply
-
-                    </button>
-
-                  </div>
-
-                </div>
-
-              </article>
-
-            </div>
-
-            <!-- Comment Form -->
-            <form id="commentForm" class="comment-form">
-
-              <h3>Leave a Comment</h3>
-
-              <p>
-                Your email address will not be published.
-              </p>
-
-              <div class="form-row">
-
-                <label>
-                  Name
-
-                  <input name="name" type="text" required placeholder="Your name">
-                </label>
-
-                <label>
-                  Email
-
-                  <input name="email" type="email" required placeholder="you@example.com">
-                </label>
-
-              </div>
-
-              <label>
-                Comment
-
-                <textarea name="comment" rows="6" required placeholder="Write your comment..."></textarea>
-              </label>
-
-              <label class="checkbox-label">
-
-                <input type="checkbox">
-
-                Save my details for next time.
-
-              </label>
-
-              <button class="button button-primary" type="submit">
-                Post Comment
-              </button>
-
-            </form>
-
-          </section>
-
-        </article>
-
-        <!-- Sidebar 330px -->
-        <aside class="blog-sidebar">
-
-          <div class="sticky-sidebar">
-
-            <!-- Sticky TOC -->
-            <nav class="toc-card" aria-label="Article table of contents">
 
               <h3>
-                <i class="fa-solid fa-list"></i>
-                Contents
+                <a href="single-blog.html">
+                  A Practical Technical SEO Audit Workflow
+                </a>
               </h3>
 
-              <ol>
-
-                <li>
-                  <a href="#article-section-1">
-                    How AI changes development
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#article-section-2">
-                    Practical use cases
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#article-section-3">
-                    Building responsibly
-                  </a>
-                </li>
-
-              </ol>
-
-              <div class="toc-progress">
-                <span id="tocProgress"></span>
-              </div>
-
-            </nav>
-
-            <!-- Author Widget -->
-            <div class="sidebar-card author-widget">
-
-              <img src="https://i.pravatar.cc/140?img=12" alt="John Smith">
-
-              <h3>John Smith</h3>
-
               <p>
-                Technology writer covering web development,
-                AI and digital products.
+                Identify crawl, indexing, speed and content
+                problems in a repeatable order.
               </p>
 
-              <div>
-
-                <a href="#">
-                  <i class="fa-brands fa-x-twitter"></i>
-                </a>
-
-                <a href="#">
-                  <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-
-                <a href="#">
-                  <i class="fa-solid fa-globe"></i>
-                </a>
-
+              <div class="post-meta">
+                <span>Michael Chen</span>
+                <span>9 min read</span>
               </div>
+
+              <a
+                class="button button-primary"
+                href="single-blog.html"
+              >
+                Read More
+              </a>
 
             </div>
 
-            <!-- Newsletter -->
-            <div class="sidebar-card">
+          </article>
 
-              <h3>Weekly Newsletter</h3>
-
-              <p>
-                One useful email. No spam.
-              </p>
-
-              <form class="newsletter-form">
-
-                <input type="email" required placeholder="Email address">
-
-                <button class="button button-primary" type="submit">
-                  Subscribe
-                </button>
-
-              </form>
-
-            </div>
-
-          </div>
-
-        </aside>
+        </div>
 
       </div>
 
-    </section>
+      <aside class="sidebar-stack">
 
-    <!-- =========================
-         CATEGORY PAGE
-    ========================== -->
-    <section id="page-category" class="page" data-page="category">
+        <section class="sidebar-card">
 
-      <!-- Category Banner -->
-      <section class="page-banner">
-
-        <div class="container">
-
-          <nav class="breadcrumb breadcrumb-light">
-
-            <a href="#home">Home</a>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
-            <span>Technology</span>
-
-          </nav>
-
-          <span class="eyebrow eyebrow-light">
-            Explore Topic
-          </span>
-
-          <h1>Technology</h1>
+          <h3>About TechBlog</h3>
 
           <p>
-            Practical guides, analysis and ideas about development,
-            artificial intelligence, security and modern
-            digital products.
+            Practical tutorials and actionable insights
+            about technology, AI, SEO and business.
           </p>
 
-          <div class="banner-stats">
-
-            <span>
-              <strong>48</strong>
-              Articles
-            </span>
-
-            <span>
-              <strong>12</strong>
-              Authors
-            </span>
-
-            <span>
-              <strong>125K</strong>
-              Readers
-            </span>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- Category Posts -->
-      <section class="container section-space">
-
-        <div class="category-toolbar">
-
-          <div>
-
-            <h2>
-              Latest Technology Articles
-            </h2>
-
-            <p id="categoryResultCount">
-              Showing articles
-            </p>
-
-          </div>
-
-          <select id="categorySelect" aria-label="Filter category">
-
-            <option value="all">
-              All topics
-            </option>
-
-            <option value="AI">
-              AI
-            </option>
-
-            <option value="Development">
-              Development
-            </option>
-
-            <option value="Security">
-              Security
-            </option>
-
-            <option value="SEO">
-              SEO
-            </option>
-
-          </select>
-
-        </div>
-
-        <div id="categoryGrid" class="post-grid post-grid-3"></div>
-
-        <nav id="categoryPagination" class="pagination" aria-label="Category pagination"></nav>
-
-      </section>
-
-    </section>
-
-    <!-- =========================
-         SEARCH PAGE
-    ========================== -->
-    <section id="page-search" class="page" data-page="search">
-
-      <!-- Search Hero -->
-      <section class="search-hero">
-
-        <div class="container search-hero-inner">
-
-          <span class="eyebrow eyebrow-light">
-            Find Useful Content
-          </span>
-
-          <h1>Search TechBlog</h1>
-
-          <p>
-            Search tutorials, analysis, guides
-            and practical ideas.
-          </p>
-
-          <form id="largeSearchForm" class="large-search">
-
-            <input id="largeSearchInput" type="search" placeholder="What are you looking for?"
-              aria-label="Search all articles">
-
-            <button type="submit">
-
-              <i class="fa-solid fa-magnifying-glass"></i>
-
-              Search
-
-            </button>
-
-          </form>
-
-          <div class="popular-searches">
-
-            <span>Popular:</span>
-
-            <button data-search-term="Artificial Intelligence">
-              Artificial Intelligence
-            </button>
-
-            <button data-search-term="Laravel">
-              Laravel
-            </button>
-
-            <button data-search-term="SEO">
-              SEO
-            </button>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- Search Results -->
-      <section class="container section-space">
-
-        <div class="search-toolbar">
-
-          <div>
-
-            <h2 id="searchHeading">
-              All Articles
-            </h2>
-
-            <p id="searchCount"></p>
-
-          </div>
-
-          <div class="sort-buttons" role="group" aria-label="Sort search results">
-
-            <button class="active" data-sort="newest">
-              Newest
-            </button>
-
-            <button data-sort="popular">
-              Popular
-            </button>
-
-            <button data-sort="oldest">
-              Oldest
-            </button>
-
-          </div>
-
-        </div>
-
-        <div id="searchResults" class="search-results"></div>
-
-        <div id="emptySearch" class="empty-state" hidden>
-
-          <div>
-            <i class="fa-regular fa-folder-open"></i>
-          </div>
-
-          <h3>
-            No articles found
-          </h3>
-
-          <p>
-            Try a shorter or more general search term.
-          </p>
-
-          <button class="button button-primary" id="clearSearch" type="button">
-            Clear Search
-          </button>
-
-        </div>
-
-      </section>
-
-    </section>
-
-    <!-- =========================
-         ABOUT PAGE
-    ========================== -->
-    <section id="page-about" class="page" data-page="about">
-
-      <!-- About Hero -->
-      <section class="about-hero page-banner">
-
-        <div class="container about-hero-grid">
-
-          <div>
-
-            <span class="eyebrow eyebrow-light">
-              About TechBlog
-            </span>
-
-            <h1>
-              Ideas that help people build
-              better digital products.
-            </h1>
-
-            <p>
-              We turn complex technology, AI and search topics
-              into practical guidance for creators, developers
-              and growing businesses.
-            </p>
-
-            <a class="button button-light" href="#category">
-              Explore Articles
-            </a>
-
-          </div>
-
-          <div class="about-visual">
-
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1100&q=85"
-              alt="TechBlog editorial team">
-
-            <div class="floating-stat">
-
-              <strong>1M+</strong>
-
-              <span>
-                Annual readers
-              </span>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- Mission and Vision -->
-      <section class="container section-space">
-
-        <div class="section-heading centered">
-
-          <div>
-
-            <span class="eyebrow">
-              Our Foundation
-            </span>
-
-            <h2>Mission and Vision</h2>
-
-            <p>
-              Clear information should help people
-              make confident decisions.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="mission-grid">
-
-          <article>
-
-            <div class="feature-icon">
-              <i class="fa-solid fa-bullseye"></i>
-            </div>
-
-            <h3>Our Mission</h3>
-
-            <p>
-              Publish accurate, practical and accessible
-              content that readers can apply to real projects.
-            </p>
-
-          </article>
-
-          <article>
-
-            <div class="feature-icon">
-              <i class="fa-regular fa-eye"></i>
-            </div>
-
-            <h3>Our Vision</h3>
-
-            <p>
-              Build a trusted learning platform where
-              technology feels understandable, useful and human.
-            </p>
-
-          </article>
-
-          <article>
-
-            <div class="feature-icon">
-              <i class="fa-solid fa-shield-halved"></i>
-            </div>
-
-            <h3>Our Standards</h3>
-
-            <p>
-              Prioritize clarity, responsible recommendations,
-              editorial review and transparent corrections.
-            </p>
-
-          </article>
-
-        </div>
-
-      </section>
-
-      <!-- Timeline -->
-      <section class="soft-section">
-
-        <div class="container section-space">
-
-          <div class="section-heading">
-
-            <div>
-
-              <span class="eyebrow">
-                Our Story
-              </span>
-
-              <h2>TechBlog Timeline</h2>
-
-            </div>
-
-          </div>
-
-          <div class="timeline">
-
-            <article>
-
-              <span>2022</span>
-
-              <div>
-
-                <h3>TechBlog Started</h3>
-
-                <p>
-                  A small independent blog focused on
-                  useful development tutorials.
-                </p>
-
-              </div>
-
-            </article>
-
-            <article>
-
-              <span>2023</span>
-
-              <div>
-
-                <h3>
-                  Expanded Editorial Coverage
-                </h3>
-
-                <p>
-                  Added SEO, artificial intelligence,
-                  business and digital product topics.
-                </p>
-
-              </div>
-
-            </article>
-
-            <article>
-
-              <span>2025</span>
-
-              <div>
-
-                <h3>
-                  Global Contributor Network
-                </h3>
-
-                <p>
-                  Specialists began sharing real experience
-                  from different industries.
-                </p>
-
-              </div>
-
-            </article>
-
-            <article>
-
-              <span>2026</span>
-
-              <div>
-
-                <h3>One Million Readers</h3>
-
-                <p>
-                  Our practical learning library reached
-                  readers around the world.
-                </p>
-
-              </div>
-
-            </article>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- Team -->
-      <section class="container section-space">
-
-        <div class="section-heading centered">
-
-          <div>
-
-            <span class="eyebrow">
-              Our People
-            </span>
-
-            <h2>Meet the Team</h2>
-
-          </div>
-
-        </div>
-
-        <div class="team-grid">
-
-          <article>
-
-            <img src="https://i.pravatar.cc/400?img=12" alt="John Smith">
-
-            <h3>John Smith</h3>
-
-            <p>Editor in Chief</p>
-
-            <div>
-
-              <a href="#">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-
-              <a href="#">
-                <i class="fa-brands fa-x-twitter"></i>
-              </a>
-
-            </div>
-
-          </article>
-
-          <article>
-
-            <img src="https://i.pravatar.cc/400?img=47" alt="Sarah Johnson">
-
-            <h3>Sarah Johnson</h3>
-
-            <p>Senior SEO Editor</p>
-
-            <div>
-
-              <a href="#">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-
-              <a href="#">
-                <i class="fa-brands fa-x-twitter"></i>
-              </a>
-
-            </div>
-
-          </article>
-
-          <article>
-
-            <img src="https://i.pravatar.cc/400?img=15" alt="David Kim">
-
-            <h3>David Kim</h3>
-
-            <p>Technology Writer</p>
-
-            <div>
-
-              <a href="#">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-
-              <a href="#">
-                <i class="fa-brands fa-x-twitter"></i>
-              </a>
-
-            </div>
-
-          </article>
-
-          <article>
-
-            <img src="https://i.pravatar.cc/400?img=44" alt="Mia Chen">
-
-            <h3>Mia Chen</h3>
-
-            <p>Product Designer</p>
-
-            <div>
-
-              <a href="#">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-
-              <a href="#">
-                <i class="fa-brands fa-x-twitter"></i>
-              </a>
-
-            </div>
-
-          </article>
-
-        </div>
-
-      </section>
-
-      <!-- About CTA -->
-      <section class="container cta-section">
-
-        <div>
-
-          <span class="eyebrow eyebrow-light">
-            Start Exploring
-          </span>
-
-          <h2>
-            Learn something useful today.
-          </h2>
-
-          <p>
-            Browse practical articles written to help you
-            build, grow and make better decisions.
-          </p>
-
-        </div>
-
-        <a class="button button-light" href="#category">
-          Browse Articles
-        </a>
-
-      </section>
-
-    </section>
-
-    <!-- =========================
-         CONTACT PAGE
-    ========================== -->
-    <section id="page-contact" class="page" data-page="contact">
-
-      <section class="page-banner compact-banner">
-
-        <div class="container">
-
-          <nav class="breadcrumb breadcrumb-light">
-
-            <a href="#home">Home</a>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
-            <span>Contact</span>
-
-          </nav>
-
-          <span class="eyebrow eyebrow-light">
-            Get in Touch
-          </span>
-
-          <h1>Contact TechBlog</h1>
-
-          <p>
-            Have a question, correction, partnership idea
-            or story suggestion? Send us a message.
-          </p>
-
-        </div>
-
-      </section>
-
-      <section class="container section-space contact-layout">
-
-        <!-- Contact Form -->
-        <div class="contact-form-card">
-
-          <span class="eyebrow">
-            Send a Message
-          </span>
-
-          <h2>How can we help?</h2>
-
-          <form id="contactForm">
-
-            <div class="form-row">
-
-              <label>
-                First Name
-
-                <input name="firstName" type="text" required placeholder="John">
-              </label>
-
-              <label>
-                Last Name
-
-                <input name="lastName" type="text" required placeholder="Smith">
-              </label>
-
-            </div>
-
-            <div class="form-row">
-
-              <label>
-                Email
-
-                <input name="email" type="email" required placeholder="john@example.com">
-              </label>
-
-              <label>
-                Topic
-
-                <select name="topic" required>
-
-                  <option value="">
-                    Select a topic
-                  </option>
-
-                  <option>
-                    General question
-                  </option>
-
-                  <option>
-                    Editorial correction
-                  </option>
-
-                  <option>
-                    Partnership
-                  </option>
-
-                  <option>
-                    Write for us
-                  </option>
-
-                </select>
-
-              </label>
-
-            </div>
-
-            <label>
-              Subject
-
-              <input name="subject" type="text" required placeholder="How can we help?">
-            </label>
-
-            <label>
-              Message
-
-              <textarea name="message" rows="7" required placeholder="Write your message here..."></textarea>
-            </label>
-
-            <label class="checkbox-label">
-
-              <input type="checkbox" required>
-
-              I agree to the privacy policy.
-
-            </label>
-
-            <button class="button button-primary" type="submit">
-              Send Message
-
-              <i class="fa-regular fa-paper-plane"></i>
-            </button>
-
-          </form>
-
-        </div>
-
-        <!-- Contact Information -->
-        <aside class="contact-info">
-
-          <div>
-
-            <span class="eyebrow">
-              Contact Information
-            </span>
-
-            <h2>
-              Let’s start a conversation.
-            </h2>
-
-            <p>
-              Our editorial team normally responds
-              within two business days.
-            </p>
-
-          </div>
-
-          <article>
-
-            <i class="fa-solid fa-location-dot"></i>
-
-            <div>
-
-              <h3>Address</h3>
-
-              <p>
-                120 Innovation Street
-                <br>
-                Berlin, Germany
-              </p>
-
-            </div>
-
-          </article>
-
-          <article>
-
-            <i class="fa-solid fa-phone"></i>
-
-            <div>
-
-              <h3>Phone</h3>
-
-              <p>
-                <a href="tel:+493012345678">
-                  +49 30 1234 5678
-                </a>
-              </p>
-
-            </div>
-
-          </article>
-
-          <article>
-
-            <i class="fa-regular fa-envelope"></i>
-
-            <div>
-
-              <h3>Email</h3>
-
-              <p>
-                <a href="mailto:contact@techblog.com">
-                  contact@techblog.com
-                </a>
-              </p>
-
-            </div>
-
-          </article>
-
-          <article>
-
-            <i class="fa-regular fa-clock"></i>
-
-            <div>
-
-              <h3>Working Hours</h3>
-
-              <p>
-                Monday–Friday
-                <br>
-                09:00–17:00
-              </p>
-
-            </div>
-
-          </article>
-
-          <div class="contact-socials">
-
-            <a href="#">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-
-            <a href="#">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-
-            <a href="#">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-
-            <a href="#">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-
-          </div>
-
-        </aside>
-
-      </section>
-
-      <!-- Map -->
-      <section class="container map-section">
-
-        <iframe title="TechBlog location map" src="https://www.google.com/maps?q=Berlin%20Germany&z=12&output=embed"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-      </section>
-
-    </section>
-
-    <!-- =========================
-         PRIVACY POLICY PAGE
-    ========================== -->
-    <section id="page-privacy" class="page" data-page="privacy">
-
-      <section class="compact-page-hero">
-
-        <div class="container">
-
-          <nav class="breadcrumb">
-
-            <a href="#home">Home</a>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
-            <span>Privacy Policy</span>
-
-          </nav>
-
-          <h1>Privacy Policy</h1>
-
-          <p>
-            Last updated: July 18, 2026
-          </p>
-
-        </div>
-
-      </section>
-
-      <article class="policy-content">
-
-        <p class="lead">
-          This policy explains what information TechBlog may
-          collect, why it is used and what choices visitors have.
-        </p>
-
-        <h2>1. Information We Collect</h2>
-
-        <p>
-          We may receive information you submit through forms,
-          newsletter subscriptions or comments. This may include
-          your name, email address and message.
-        </p>
-
-        <p>
-          Basic technical information such as browser type,
-          device type, referring page and anonymous usage data
-          may also be collected for security and analytics.
-        </p>
-
-        <h2>2. How Information Is Used</h2>
-
-        <ul>
-          <li>
-            Respond to questions and support requests.
-          </li>
-
-          <li>
-            Deliver newsletters when you subscribe.
-          </li>
-
-          <li>
-            Moderate comments and prevent abuse.
-          </li>
-
-          <li>
-            Understand and improve site performance.
-          </li>
-
-          <li>
-            Comply with legal obligations.
-          </li>
-        </ul>
-
-        <h2>3. Cookies and Analytics</h2>
-
-        <p>
-          Cookies may remember preferences and help us understand
-          how visitors use the website. You can control cookies
-          through your browser settings.
-        </p>
-
-        <h2>4. Third-Party Services</h2>
-
-        <p>
-          Embedded media, analytics, advertising or email
-          providers may process limited information under
-          their own privacy policies.
-        </p>
-
-        <h2>5. Data Retention and Security</h2>
-
-        <p>
-          Information is retained only as long as reasonably
-          required for the purpose it was collected. We use
-          appropriate measures to reduce unauthorized access,
-          but no online system can guarantee absolute security.
-        </p>
-
-        <h2>6. Your Choices</h2>
-
-        <p>
-          You may request access, correction or deletion of
-          personal information where applicable. Newsletter
-          emails include an unsubscribe option.
-        </p>
-
-        <h2>7. Children’s Privacy</h2>
-
-        <p>
-          TechBlog is not intended for children under 13,
-          and we do not knowingly collect their personal
-          information.
-        </p>
-
-        <h2>8. Policy Updates</h2>
-
-        <p>
-          This policy may be updated when our services or
-          legal obligations change. The latest revision date
-          will appear at the top of this page.
-        </p>
-
-        <h2>9. Contact Us</h2>
-
-        <p>
-          For privacy questions, email
-
-          <a href="mailto:privacy@techblog.com">
-            privacy@techblog.com
+          <a
+            class="button button-outline"
+            href="about.html"
+          >
+            Learn More
           </a>
 
-          or use our
+        </section>
 
-          <a href="#contact">
-            contact page
-          </a>.
-        </p>
+        <section class="sidebar-card">
 
-      </article>
+          <h3>Popular Posts</h3>
 
-    </section>
+          <a
+            class="popular-sidebar-post"
+            href="single-blog.html"
+          >
 
-    <!-- =========================
-         404 PAGE
-    ========================== -->
-    <section id="page-404" class="page" data-page="404">
-
-      <section class="not-found-page container">
-
-        <div class="not-found-illustration">
-
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-
-          <div class="error-number">
-            404
-          </div>
-
-          <div class="lost-card">
-
-            <i class="fa-regular fa-file-lines"></i>
+            <img
+              src="https://picsum.photos/180/140?random=121"
+              alt="AI content marketing"
+            >
 
             <span>
-              Page not found
+              <h4>
+                How AI Is Changing Content Marketing
+              </h4>
+
+              <small>July 18, 2026</small>
             </span>
 
-          </div>
+          </a>
 
-        </div>
+          <a
+            class="popular-sidebar-post"
+            href="single-blog.html"
+          >
 
-        <div class="not-found-content">
+            <img
+              src="https://picsum.photos/180/140?random=122"
+              alt="Technical SEO"
+            >
 
-          <span class="eyebrow">
-            Something is missing
-          </span>
+            <span>
+              <h4>
+                The Ultimate Technical SEO Audit Guide
+              </h4>
 
-          <h1>
-            We couldn’t find that page.
-          </h1>
+              <small>July 16, 2026</small>
+            </span>
+
+          </a>
+
+          <a
+            class="popular-sidebar-post"
+            href="single-blog.html"
+          >
+
+            <img
+              src="https://picsum.photos/180/140?random=123"
+              alt="Productivity"
+            >
+
+            <span>
+              <h4>
+                Simple Habits for Better Productivity
+              </h4>
+
+              <small>July 14, 2026</small>
+            </span>
+
+          </a>
+
+        </section>
+
+        <section class="sidebar-card">
+
+          <h3>Newsletter</h3>
 
           <p>
-            The page may have moved, the address may be
-            incorrect or the content may no longer be available.
+            Get the best articles every week.
           </p>
 
-          <form id="notFoundSearch" class="not-found-search">
+          <form class="newsletter-form">
 
-            <input type="search" placeholder="Search TechBlog..." aria-label="Search from 404 page">
+            <input
+              type="email"
+              required
+              placeholder="Email address"
+            >
 
-            <button type="submit">
-
-              <i class="fa-solid fa-magnifying-glass"></i>
-
+            <button
+              class="button button-primary"
+              type="submit"
+            >
+              Subscribe
             </button>
 
           </form>
 
-          <div class="not-found-actions">
+        </section>
 
-            <a class="button button-primary" href="#home">
+        <section class="sidebar-card">
 
-              <i class="fa-solid fa-house"></i>
+          <h3>Popular Topics</h3>
 
-              Go Home
+          <div class="tag-cloud">
 
-            </a>
-
-            <a class="button button-outline" href="#category">
-              Browse Articles
-            </a>
+            <a href="category.html?category=AI">AI</a>
+            <a href="category.html?category=Development">Laravel</a>
+            <a href="category.html?category=SEO">SEO</a>
+            <a href="category.html?category=Business">Business</a>
+            <a href="category.html?category=Security">Security</a>
+            <a href="category.html?category=Health">Health</a>
 
           </div>
 
-        </div>
+        </section>
 
-      </section>
+      </aside>
 
     </section>
 
   </main>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
-  <footer class="site-footer">
+  <div id="siteFooter"></div>
 
-    <div class="container footer-grid">
-
-      <div class="footer-brand">
-
-        <a class="logo logo-light" href="#home">
-
-          <span class="logo-mark">T</span>
-
-          <span>
-            Tech<span>Blog</span>
-          </span>
-
-        </a>
-
-        <p>
-          Practical articles about technology, AI, SEO,
-          development and digital business.
-        </p>
-
-        <div class="footer-socials">
-
-          <a href="#">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-
-          <a href="#">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-
-          <a href="#">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-
-          <a href="#">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-
-        </div>
-
-      </div>
-
-      <div>
-
-        <h3>Explore</h3>
-
-        <a href="#home">Home</a>
-        <a href="#category">Technology</a>
-        <a href="#search">Search</a>
-        <a href="#blog">Featured Article</a>
-
-      </div>
-
-      <div>
-
-        <h3>Company</h3>
-
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#privacy">Privacy Policy</a>
-        <a href="#404">404 Page</a>
-
-      </div>
-
-      <div>
-
-        <h3>Newsletter</h3>
-
-        <p>
-          Get one useful email every week.
-        </p>
-
-        <form class="footer-newsletter newsletter-form">
-
-          <input type="email" required placeholder="Email address">
-
-          <button type="submit" aria-label="Subscribe">
-            <i class="fa-regular fa-paper-plane"></i>
-          </button>
-
-        </form>
-
-      </div>
-
-    </div>
-
-    <div class="container footer-bottom">
-
-      <p>
-        © <span id="currentYear"></span>
-        TechBlog. All rights reserved.
-      </p>
-
-      <div>
-        <a href="#privacy">Privacy</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-    </div>
-
-  </footer>
-
-  <!-- Toast Notification -->
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
 
 </body>
 

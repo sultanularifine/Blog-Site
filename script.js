@@ -1,17 +1,19 @@
+/* =========================================================
+   script.js
+========================================================= */
+
 "use strict";
 
-/* =========================
-   POST DATA
-========================== */
+/* =========================================================
+   ARTICLE DATA
+========================================================= */
 
-const posts = [
+const POSTS = [
   {
     id: 1,
-    title:
-      "Future of Artificial Intelligence in Modern Web Development",
+    title: "Future of Artificial Intelligence in Modern Web Development",
     category: "AI",
-    image:
-      "https://picsum.photos/800/520?random=301",
+    image: "https://picsum.photos/800/520?random=301",
     excerpt:
       "How AI supports coding, testing, research and responsible development workflows.",
     date: "2026-07-18",
@@ -21,11 +23,9 @@ const posts = [
   },
   {
     id: 2,
-    title:
-      "Laravel Architecture for Maintainable Applications",
+    title: "Laravel Architecture for Maintainable Applications",
     category: "Development",
-    image:
-      "https://picsum.photos/800/520?random=302",
+    image: "https://picsum.photos/800/520?random=302",
     excerpt:
       "Organize services, actions, validation and domain logic without unnecessary complexity.",
     date: "2026-07-17",
@@ -35,11 +35,9 @@ const posts = [
   },
   {
     id: 3,
-    title:
-      "A Practical Technical SEO Audit Workflow",
+    title: "A Practical Technical SEO Audit Workflow",
     category: "SEO",
-    image:
-      "https://picsum.photos/800/520?random=303",
+    image: "https://picsum.photos/800/520?random=303",
     excerpt:
       "Review crawling, indexing, performance and content issues in a useful order.",
     date: "2026-07-16",
@@ -49,11 +47,9 @@ const posts = [
   },
   {
     id: 4,
-    title:
-      "Security Habits Every Web Team Should Adopt",
+    title: "Security Habits Every Web Team Should Adopt",
     category: "Security",
-    image:
-      "https://picsum.photos/800/520?random=304",
+    image: "https://picsum.photos/800/520?random=304",
     excerpt:
       "Reduce common risks through access control, updates, backups and code review.",
     date: "2026-07-15",
@@ -63,13 +59,11 @@ const posts = [
   },
   {
     id: 5,
-    title:
-      "How Generative AI Improves Content Research",
+    title: "How Generative AI Improves Content Research",
     category: "AI",
-    image:
-      "https://picsum.photos/800/520?random=305",
+    image: "https://picsum.photos/800/520?random=305",
     excerpt:
-      "Use structured prompts to organize research without sacrificing accuracy or originality.",
+      "Use structured prompts to organize research without sacrificing accuracy.",
     date: "2026-07-14",
     views: 19600,
     comments: 27,
@@ -77,13 +71,11 @@ const posts = [
   },
   {
     id: 6,
-    title:
-      "Build an Accessible Navigation Menu",
+    title: "Build an Accessible Navigation Menu",
     category: "Development",
-    image:
-      "https://picsum.photos/800/520?random=306",
+    image: "https://picsum.photos/800/520?random=306",
     excerpt:
-      "Create keyboard-friendly navigation with clear focus states and responsive behavior.",
+      "Create keyboard-friendly navigation with responsive behavior and clear focus states.",
     date: "2026-07-13",
     views: 9800,
     comments: 10,
@@ -91,11 +83,9 @@ const posts = [
   },
   {
     id: 7,
-    title:
-      "Core Web Vitals: What Actually Matters",
+    title: "Core Web Vitals: What Actually Matters",
     category: "SEO",
-    image:
-      "https://picsum.photos/800/520?random=307",
+    image: "https://picsum.photos/800/520?random=307",
     excerpt:
       "Understand loading, responsiveness and visual stability through practical examples.",
     date: "2026-07-12",
@@ -105,11 +95,9 @@ const posts = [
   },
   {
     id: 8,
-    title:
-      "Protecting API Keys in Frontend Projects",
+    title: "Protecting API Keys in Frontend Projects",
     category: "Security",
-    image:
-      "https://picsum.photos/800/520?random=308",
+    image: "https://picsum.photos/800/520?random=308",
     excerpt:
       "Learn why public client code cannot safely hold secrets and what to do instead.",
     date: "2026-07-11",
@@ -119,11 +107,9 @@ const posts = [
   },
   {
     id: 9,
-    title:
-      "Designing Better AI Prompts for Developers",
+    title: "Designing Better AI Prompts for Developers",
     category: "AI",
-    image:
-      "https://picsum.photos/800/520?random=309",
+    image: "https://picsum.photos/800/520?random=309",
     excerpt:
       "Provide context, constraints and examples to get more useful technical answers.",
     date: "2026-07-10",
@@ -133,13 +119,11 @@ const posts = [
   },
   {
     id: 10,
-    title:
-      "Modern CSS Layout Without a Framework",
+    title: "Modern CSS Layout Without a Framework",
     category: "Development",
-    image:
-      "https://picsum.photos/800/520?random=310",
+    image: "https://picsum.photos/800/520?random=310",
     excerpt:
-      "Use Grid, Flexbox, clamp and container patterns to build responsive interfaces.",
+      "Use Grid, Flexbox and modern CSS functions to build responsive interfaces.",
     date: "2026-07-09",
     views: 11700,
     comments: 14,
@@ -147,11 +131,9 @@ const posts = [
   },
   {
     id: 11,
-    title:
-      "Internal Linking for Large Content Websites",
+    title: "Internal Linking for Large Content Websites",
     category: "SEO",
-    image:
-      "https://picsum.photos/800/520?random=311",
+    image: "https://picsum.photos/800/520?random=311",
     excerpt:
       "Help readers and search engines discover related pages with a scalable strategy.",
     date: "2026-07-08",
@@ -161,83 +143,343 @@ const posts = [
   },
   {
     id: 12,
-    title:
-      "A Simple Incident Response Checklist",
+    title: "A Simple Incident Response Checklist",
     category: "Security",
-    image:
-      "https://picsum.photos/800/520?random=312",
+    image: "https://picsum.photos/800/520?random=312",
     excerpt:
       "Prepare your team to contain, investigate and communicate during an incident.",
     date: "2026-07-07",
     views: 8900,
     comments: 8,
     read: "5 min"
+  },
+  {
+    id: 13,
+    title: "How Small Businesses Can Use AI Responsibly",
+    category: "Business",
+    image: "https://picsum.photos/800/520?random=313",
+    excerpt:
+      "Practical ways small teams can save time without compromising customer trust.",
+    date: "2026-07-06",
+    views: 13500,
+    comments: 17,
+    read: "7 min"
+  },
+  {
+    id: 14,
+    title: "Healthy Work Habits for Remote Developers",
+    category: "Health",
+    image: "https://picsum.photos/800/520?random=314",
+    excerpt:
+      "Reduce fatigue and improve focus with simple movement and workspace habits.",
+    date: "2026-07-05",
+    views: 10800,
+    comments: 13,
+    read: "6 min"
+  },
+  {
+    id: 15,
+    title: "Content Strategy for a New Business Website",
+    category: "Business",
+    image: "https://picsum.photos/800/520?random=315",
+    excerpt:
+      "Plan service pages, supporting articles and calls to action before publishing.",
+    date: "2026-07-04",
+    views: 12800,
+    comments: 11,
+    read: "8 min"
   }
 ];
 
-/* =========================
-   APPLICATION STATE
-========================== */
+const $ = (selector, scope = document) => scope.querySelector(selector);
 
-const state = {
-  categoryPage: 1,
-  categoryFilter: "all",
-  searchTerm: "",
-  searchSort: "newest"
-};
+const $$ = (selector, scope = document) => [
+  ...scope.querySelectorAll(selector)
+];
 
-const pageTitleMap = {
-  home:
-    "TechBlog — Modern Technology Blog",
+/* =========================================================
+   SHARED HEADER AND FOOTER
+========================================================= */
 
-  blog:
-    "Future of Artificial Intelligence in Modern Web Development | TechBlog",
+function renderHeader() {
+  const target = $("#siteHeader");
 
-  category:
-    "Technology Articles | TechBlog",
+  if (!target) {
+    return;
+  }
 
-  search:
-    "Search | TechBlog",
+  const page = document.body.dataset.page || "";
 
-  about:
-    "About TechBlog",
+  target.innerHTML = `
+    <header class="site-header">
 
-  contact:
-    "Contact TechBlog",
+      <div class="topbar">
+        <div class="container topbar-inner">
 
-  privacy:
-    "Privacy Policy | TechBlog",
+          <a href="mailto:contact@techblog.com">
+            <i class="fa-regular fa-envelope"></i>
+            contact@techblog.com
+          </a>
 
-  404:
-    "Page Not Found | TechBlog"
-};
+          <div class="topbar-socials">
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
 
-const routeAliases = {
-  "": "home",
-  home: "home",
-  blog: "blog",
-  category: "category",
-  search: "search",
-  about: "about",
-  contact: "contact",
-  privacy: "privacy",
-  "privacy-policy": "privacy",
-  404: "404"
-};
+            <a href="#" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
 
-/* =========================
+            <a href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="main-header">
+        <div class="container header-inner">
+
+          <a class="logo" href="index.html" aria-label="TechBlog home">
+            <span class="logo-mark">T</span>
+
+            <span class="logo-text">
+              Tech<span>Blog</span>
+            </span>
+          </a>
+
+          <form class="header-search site-search-form" role="search">
+
+            <label class="sr-only" for="headerSearchInput">
+              Search articles
+            </label>
+
+            <input
+              id="headerSearchInput"
+              name="q"
+              type="search"
+              placeholder="Search articles..."
+            >
+
+            <button type="submit" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+          </form>
+
+          <div class="header-actions">
+
+            <button
+              id="themeToggle"
+              class="icon-button"
+              type="button"
+              aria-label="Toggle dark mode"
+            >
+              <i class="fa-regular fa-moon"></i>
+            </button>
+
+            <a
+              class="button button-outline desktop-only"
+              href="contact.html"
+            >
+              Contact
+            </a>
+
+            <button
+              id="menuToggle"
+              class="menu-toggle"
+              type="button"
+              aria-label="Open menu"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+      <nav id="mainNav" class="main-nav" aria-label="Primary navigation">
+        <div class="container nav-inner">
+
+          <a
+            href="index.html"
+            class="${page === "home" ? "active" : ""}"
+          >
+            Home
+          </a>
+
+          <a
+            href="category.html?category=Development"
+            class="${page === "category" ? "active" : ""}"
+          >
+            Technology
+          </a>
+
+          <a href="category.html?category=Business">
+            Business
+          </a>
+
+          <a href="category.html?category=SEO">
+            SEO
+          </a>
+
+          <a href="category.html?category=AI">
+            AI
+          </a>
+
+          <a
+            href="about.html"
+            class="${page === "about" ? "active" : ""}"
+          >
+            About
+          </a>
+
+          <a
+            href="contact.html"
+            class="${page === "contact" ? "active" : ""}"
+          >
+            Contact
+          </a>
+
+          <a
+            href="search.html"
+            class="${page === "search" ? "active" : ""}"
+          >
+            Search
+          </a>
+
+        </div>
+      </nav>
+
+    </header>
+  `;
+}
+
+function renderFooter() {
+  const target = $("#siteFooter");
+
+  if (!target) {
+    return;
+  }
+
+  target.innerHTML = `
+    <footer class="site-footer">
+
+      <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+          <a class="logo footer-logo" href="index.html">
+            <span class="logo-mark">T</span>
+
+            <span class="logo-text">
+              Tech<span>Blog</span>
+            </span>
+          </a>
+
+          <p>
+            Practical articles about technology, AI, SEO,
+            development, business and digital growth.
+          </p>
+
+          <div class="footer-socials">
+
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>Explore</h3>
+
+          <a href="index.html">Home</a>
+          <a href="category.html">Categories</a>
+          <a href="search.html">Search</a>
+          <a href="single-blog.html">Featured Article</a>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>Company</h3>
+
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="404.html">404 Page</a>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>Newsletter</h3>
+
+          <p>
+            Receive one useful email every week.
+          </p>
+
+          <form class="newsletter-form footer-newsletter">
+
+            <input
+              type="email"
+              required
+              placeholder="Email address"
+            >
+
+            <button type="submit" aria-label="Subscribe">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="container footer-bottom">
+
+        <p>
+          © <span id="currentYear"></span>
+          TechBlog. All rights reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+      </div>
+
+    </footer>
+  `;
+}
+
+/* =========================================================
    HELPERS
-========================== */
-
-const $ = (
-  selector,
-  scope = document
-) => scope.querySelector(selector);
-
-const $$ = (
-  selector,
-  scope = document
-) => [...scope.querySelectorAll(selector)];
+========================================================= */
 
 function escapeHtml(value) {
   return String(value)
@@ -249,16 +491,24 @@ function escapeHtml(value) {
 }
 
 function formatDate(dateString) {
-  return new Intl.DateTimeFormat(
-    "en-US",
-    {
-      month: "short",
-      day: "numeric",
-      year: "numeric"
-    }
-  ).format(
-    new Date(`${dateString}T00:00:00`)
-  );
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric"
+  }).format(new Date(`${dateString}T00:00:00`));
+}
+
+function getBadgeClass(category) {
+  const classes = {
+    AI: "badge-red",
+    SEO: "badge-purple",
+    Security: "badge-green",
+    Health: "badge-orange",
+    Business: "badge-blue",
+    Development: "badge-blue"
+  };
+
+  return classes[category] || "badge-blue";
 }
 
 function showToast(message) {
@@ -273,490 +523,672 @@ function showToast(message) {
 
   clearTimeout(showToast.timer);
 
-  showToast.timer = setTimeout(
-    () => toast.classList.remove("show"),
-    2600
-  );
+  showToast.timer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2600);
 }
 
-/* =========================
-   ROUTER
-========================== */
-
-function getRoute() {
-  const raw = location.hash
-    .replace(/^#/, "")
-    .split("?")[0]
-    .trim()
-    .toLowerCase();
-
-  return routeAliases[raw] || "404";
-}
-
-function setActiveNavigation(route) {
-  $$("[data-route-link]").forEach(
-    link => {
-      const target = link
-        .getAttribute("href")
-        .replace("#", "");
-
-      const isActive =
-        target === route ||
-        (
-          route === "blog" &&
-          target === "category"
-        );
-
-      link.classList.toggle(
-        "active",
-        isActive
-      );
-    }
-  );
-}
-
-function closeMobileMenu() {
-  const menu = $("#mainNav");
-  const toggle = $("#menuToggle");
-
-  menu?.classList.remove("open");
-
-  if (toggle) {
-    toggle.setAttribute(
-      "aria-expanded",
-      "false"
-    );
-
-    const icon = $("i", toggle);
-
-    icon?.classList.remove("fa-xmark");
-    icon?.classList.add("fa-bars");
-  }
-
-  document.body.classList.remove(
-    "no-scroll"
-  );
-}
-
-function showRoute() {
-  const route = getRoute();
-
-  $$(".page").forEach(
-    page => {
-      page.classList.toggle(
-        "active",
-        page.dataset.page === route
-      );
-    }
-  );
-
-  document.title =
-    pageTitleMap[route] ||
-    pageTitleMap["404"];
-
-  setActiveNavigation(route);
-  closeMobileMenu();
-
-  window.scrollTo({
-    top: 0,
-    behavior: "auto"
-  });
-
-  const footer = $(".site-footer");
-
-  if (footer) {
-    footer.hidden = false;
-  }
-
-  if (route === "category") {
-    renderCategoryPosts();
-  }
-
-  if (route === "search") {
-    renderSearchResults();
-  }
-
-  updateReadingProgress();
-}
-
-function initRouter() {
-  window.addEventListener(
-    "hashchange",
-    showRoute
-  );
-
-  if (!location.hash) {
-    history.replaceState(
-      null,
-      "",
-      "#home"
-    );
-  }
-
-  showRoute();
-}
-
-/* =========================
-   DARK MODE
-========================== */
+/* =========================================================
+   THEME
+========================================================= */
 
 function initTheme() {
   const root = document.documentElement;
   const button = $("#themeToggle");
 
-  const saved =
-    localStorage.getItem(
-      "techblog-theme"
-    );
+  const savedTheme = localStorage.getItem("techblog-theme");
 
-  const preferred =
-    window.matchMedia?.(
-      "(prefers-color-scheme: dark)"
-    ).matches
+  const preferredTheme =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"
       : "light";
 
-  const theme = saved || preferred;
+  root.dataset.theme = savedTheme || preferredTheme;
 
-  root.dataset.theme = theme;
-
-  const updateIcon = () => {
-    const isDark =
-      root.dataset.theme === "dark";
-
-    const icon = $("i", button);
-
-    if (!icon) {
+  function updateIcon() {
+    if (!button) {
       return;
     }
 
-    icon.className = isDark
-      ? "fa-regular fa-sun"
-      : "fa-regular fa-moon";
+    const isDark = root.dataset.theme === "dark";
+    const icon = $("i", button);
+
+    if (icon) {
+      icon.className = isDark
+        ? "fa-regular fa-sun"
+        : "fa-regular fa-moon";
+    }
 
     button.setAttribute(
       "aria-label",
-      isDark
-        ? "Switch to light mode"
-        : "Switch to dark mode"
+      isDark ? "Switch to light mode" : "Switch to dark mode"
     );
-  };
+  }
 
   updateIcon();
 
-  button?.addEventListener(
-    "click",
-    () => {
-      root.dataset.theme =
-        root.dataset.theme === "dark"
-          ? "light"
-          : "dark";
+  button?.addEventListener("click", () => {
+    root.dataset.theme =
+      root.dataset.theme === "dark" ? "light" : "dark";
 
-      localStorage.setItem(
-        "techblog-theme",
-        root.dataset.theme
-      );
+    localStorage.setItem("techblog-theme", root.dataset.theme);
 
-      updateIcon();
-    }
-  );
+    updateIcon();
+  });
 }
 
-/* =========================
+/* =========================================================
    MOBILE MENU
-========================== */
+========================================================= */
 
 function initMobileMenu() {
   const toggle = $("#menuToggle");
-  const menu = $("#mainNav");
+  const navigation = $("#mainNav");
 
-  toggle?.addEventListener(
-    "click",
-    () => {
-      const open =
-        menu.classList.toggle("open");
+  toggle?.addEventListener("click", () => {
+    const open = navigation.classList.toggle("open");
 
-      toggle.setAttribute(
-        "aria-expanded",
-        String(open)
-      );
+    toggle.setAttribute("aria-expanded", String(open));
 
-      const icon = $("i", toggle);
+    const icon = $("i", toggle);
 
-      if (icon) {
-        icon.className = open
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars";
-      }
-
-      document.body.classList.toggle(
-        "no-scroll",
-        open
-      );
+    if (icon) {
+      icon.className = open
+        ? "fa-solid fa-xmark"
+        : "fa-solid fa-bars";
     }
-  );
 
-  $$("#mainNav a").forEach(
-    link => {
-      link.addEventListener(
-        "click",
-        closeMobileMenu
-      );
-    }
-  );
+    document.body.classList.toggle("no-scroll", open);
+  });
 
-  window.addEventListener(
-    "resize",
-    () => {
-      if (window.innerWidth > 1100) {
-        closeMobileMenu();
-      }
+  $$("#mainNav a").forEach(link => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1100) {
+      closeMobileMenu();
     }
-  );
+  });
 }
 
-/* =========================
-   READING PROGRESS
-========================== */
+function closeMobileMenu() {
+  const navigation = $("#mainNav");
+  const toggle = $("#menuToggle");
+
+  navigation?.classList.remove("open");
+  document.body.classList.remove("no-scroll");
+
+  if (toggle) {
+    toggle.setAttribute("aria-expanded", "false");
+
+    const icon = $("i", toggle);
+
+    if (icon) {
+      icon.className = "fa-solid fa-bars";
+    }
+  }
+}
+
+/* =========================================================
+   SEARCH REDIRECT
+========================================================= */
+
+function initGlobalSearch() {
+  $$(".site-search-form").forEach(form => {
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const input = $('input[name="q"]', form);
+      const value = input?.value.trim() || "";
+
+      window.location.href =
+        `search.html?q=${encodeURIComponent(value)}`;
+    });
+  });
+}
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+function initNewsletterForms() {
+  $$(".newsletter-form").forEach(form => {
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      form.reset();
+      showToast("Thanks for subscribing!");
+    });
+  });
+}
+
+/* =========================================================
+   CATEGORY PAGE
+========================================================= */
+
+const CATEGORY_STATE = {
+  page: 1,
+  perPage: 6,
+  category: "all"
+};
+
+function createPostCard(post) {
+  return `
+    <article class="post-card">
+
+      <a class="post-card-image" href="single-blog.html?id=${post.id}">
+        <img
+          src="${post.image}"
+          alt="${escapeHtml(post.title)}"
+          loading="lazy"
+        >
+      </a>
+
+      <div class="post-card-body">
+
+        <span class="badge ${getBadgeClass(post.category)}">
+          ${escapeHtml(post.category)}
+        </span>
+
+        <h3>
+          <a href="single-blog.html?id=${post.id}">
+            ${escapeHtml(post.title)}
+          </a>
+        </h3>
+
+        <p>
+          ${escapeHtml(post.excerpt)}
+        </p>
+
+        <div class="card-meta">
+
+          <span>
+            ${formatDate(post.date)}
+          </span>
+
+          <span>
+            <i class="fa-regular fa-comment"></i>
+            ${post.comments}
+          </span>
+
+        </div>
+
+      </div>
+
+    </article>
+  `;
+}
+
+function renderCategoryPage() {
+  const grid = $("#categoryGrid");
+  const pagination = $("#categoryPagination");
+  const resultCount = $("#categoryResultCount");
+
+  if (!grid || !pagination) {
+    return;
+  }
+
+  const filtered =
+    CATEGORY_STATE.category === "all"
+      ? POSTS
+      : POSTS.filter(post => post.category === CATEGORY_STATE.category);
+
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filtered.length / CATEGORY_STATE.perPage)
+  );
+
+  CATEGORY_STATE.page = Math.min(CATEGORY_STATE.page, totalPages);
+
+  const start = (CATEGORY_STATE.page - 1) * CATEGORY_STATE.perPage;
+  const visiblePosts = filtered.slice(
+    start,
+    start + CATEGORY_STATE.perPage
+  );
+
+  grid.innerHTML = visiblePosts.map(createPostCard).join("");
+
+  if (resultCount) {
+    resultCount.textContent =
+      `Showing ${filtered.length ? start + 1 : 0}–` +
+      `${Math.min(start + CATEGORY_STATE.perPage, filtered.length)} ` +
+      `of ${filtered.length} articles`;
+  }
+
+  const buttons = [];
+
+  buttons.push(`
+    <button
+      type="button"
+      data-page="${CATEGORY_STATE.page - 1}"
+      ${CATEGORY_STATE.page === 1 ? "disabled" : ""}
+      aria-label="Previous page"
+    >
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+  `);
+
+  for (let page = 1; page <= totalPages; page += 1) {
+    buttons.push(`
+      <button
+        type="button"
+        data-page="${page}"
+        class="${page === CATEGORY_STATE.page ? "active" : ""}"
+      >
+        ${page}
+      </button>
+    `);
+  }
+
+  buttons.push(`
+    <button
+      type="button"
+      data-page="${CATEGORY_STATE.page + 1}"
+      ${CATEGORY_STATE.page === totalPages ? "disabled" : ""}
+      aria-label="Next page"
+    >
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  `);
+
+  pagination.innerHTML = buttons.join("");
+
+  $$("[data-page]", pagination).forEach(button => {
+    button.addEventListener("click", () => {
+      if (button.disabled) {
+        return;
+      }
+
+      CATEGORY_STATE.page = Number(button.dataset.page);
+      renderCategoryPage();
+
+      grid.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  });
+}
+
+function initCategoryPage() {
+  const grid = $("#categoryGrid");
+
+  if (!grid) {
+    return;
+  }
+
+  const filter = $("#categoryFilter");
+  const parameters = new URLSearchParams(window.location.search);
+  const queryCategory = parameters.get("category");
+
+  if (
+    queryCategory &&
+    POSTS.some(post => post.category === queryCategory)
+  ) {
+    CATEGORY_STATE.category = queryCategory;
+
+    if (filter) {
+      filter.value = queryCategory;
+    }
+  }
+
+  filter?.addEventListener("change", event => {
+    CATEGORY_STATE.category = event.target.value;
+    CATEGORY_STATE.page = 1;
+
+    renderCategoryPage();
+  });
+
+  renderCategoryPage();
+}
+
+/* =========================================================
+   SEARCH PAGE
+========================================================= */
+
+const SEARCH_STATE = {
+  query: "",
+  sort: "newest",
+  category: "all"
+};
+
+function createSearchResult(post) {
+  return `
+    <article class="search-result-card">
+
+      <a href="single-blog.html?id=${post.id}">
+        <img
+          src="${post.image}"
+          alt="${escapeHtml(post.title)}"
+          loading="lazy"
+        >
+      </a>
+
+      <div class="search-result-body">
+
+        <span class="badge ${getBadgeClass(post.category)}">
+          ${escapeHtml(post.category)}
+        </span>
+
+        <h3>
+          <a href="single-blog.html?id=${post.id}">
+            ${escapeHtml(post.title)}
+          </a>
+        </h3>
+
+        <p>
+          ${escapeHtml(post.excerpt)}
+        </p>
+
+        <div class="post-meta">
+
+          <span>
+            <i class="fa-regular fa-calendar"></i>
+            ${formatDate(post.date)}
+          </span>
+
+          <span>
+            <i class="fa-regular fa-clock"></i>
+            ${post.read}
+          </span>
+
+          <span>
+            <i class="fa-regular fa-eye"></i>
+            ${post.views.toLocaleString()}
+          </span>
+
+          <span>
+            <i class="fa-regular fa-comment"></i>
+            ${post.comments}
+          </span>
+
+        </div>
+
+      </div>
+
+    </article>
+  `;
+}
+
+function renderSearchPage() {
+  const results = $("#searchResults");
+  const emptyState = $("#emptySearch");
+  const heading = $("#searchHeading");
+  const count = $("#searchCount");
+
+  if (!results || !emptyState) {
+    return;
+  }
+
+  const query = SEARCH_STATE.query.trim().toLowerCase();
+
+  let filtered = POSTS.filter(post => {
+    const searchable =
+      `${post.title} ${post.category} ${post.excerpt}`.toLowerCase();
+
+    const matchesQuery = !query || searchable.includes(query);
+
+    const matchesCategory =
+      SEARCH_STATE.category === "all" ||
+      post.category === SEARCH_STATE.category;
+
+    return matchesQuery && matchesCategory;
+  });
+
+  filtered = [...filtered].sort((a, b) => {
+    if (SEARCH_STATE.sort === "popular") {
+      return b.views - a.views;
+    }
+
+    if (SEARCH_STATE.sort === "oldest") {
+      return new Date(a.date) - new Date(b.date);
+    }
+
+    return new Date(b.date) - new Date(a.date);
+  });
+
+  if (heading) {
+    heading.textContent = SEARCH_STATE.query
+      ? `Results for “${SEARCH_STATE.query}”`
+      : "All Articles";
+  }
+
+  if (count) {
+    count.textContent =
+      `${filtered.length} article${filtered.length === 1 ? "" : "s"} found`;
+  }
+
+  results.innerHTML = filtered.map(createSearchResult).join("");
+  results.hidden = filtered.length === 0;
+  emptyState.hidden = filtered.length !== 0;
+}
+
+function initSearchPage() {
+  const results = $("#searchResults");
+
+  if (!results) {
+    return;
+  }
+
+  const parameters = new URLSearchParams(window.location.search);
+  const initialQuery = parameters.get("q") || "";
+
+  SEARCH_STATE.query = initialQuery;
+
+  const input = $("#largeSearchInput");
+
+  if (input) {
+    input.value = initialQuery;
+  }
+
+  $("#largeSearchForm")?.addEventListener("submit", event => {
+    event.preventDefault();
+
+    SEARCH_STATE.query = input?.value.trim() || "";
+    renderSearchPage();
+
+    results.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+
+  $("[data-search-term]");
+
+  $$("[data-search-term]").forEach(button => {
+    button.addEventListener("click", () => {
+      SEARCH_STATE.query = button.dataset.searchTerm || "";
+
+      if (input) {
+        input.value = SEARCH_STATE.query;
+      }
+
+      renderSearchPage();
+    });
+  });
+
+  $$("[data-sort]").forEach(button => {
+    button.addEventListener("click", () => {
+      SEARCH_STATE.sort = button.dataset.sort;
+
+      $$("[data-sort]").forEach(item => {
+        item.classList.toggle("active", item === button);
+      });
+
+      renderSearchPage();
+    });
+  });
+
+  $("#searchCategoryFilter")?.addEventListener("change", event => {
+    SEARCH_STATE.category = event.target.value;
+    renderSearchPage();
+  });
+
+  $("#clearSearch")?.addEventListener("click", () => {
+    SEARCH_STATE.query = "";
+    SEARCH_STATE.category = "all";
+
+    if (input) {
+      input.value = "";
+      input.focus();
+    }
+
+    const categoryFilter = $("#searchCategoryFilter");
+
+    if (categoryFilter) {
+      categoryFilter.value = "all";
+    }
+
+    renderSearchPage();
+  });
+
+  renderSearchPage();
+}
+
+/* =========================================================
+   SINGLE BLOG PAGE
+========================================================= */
 
 function updateReadingProgress() {
   const bar = $("#readingProgress");
   const tocBar = $("#tocProgress");
-
-  if (!bar) {
-    return;
-  }
-
-  if (getRoute() !== "blog") {
-    bar.style.width = "0%";
-
-    if (tocBar) {
-      tocBar.style.width = "0%";
-    }
-
-    return;
-  }
-
   const article = $("#articleContent");
 
-  if (!article) {
+  if (!bar || !article) {
     return;
   }
 
-  const start = article.offsetTop;
-
-  const total = Math.max(
-    article.offsetHeight -
-      window.innerHeight,
-    1
-  );
+  const articleTop = article.offsetTop;
+  const total = Math.max(article.offsetHeight - window.innerHeight, 1);
 
   const current = Math.min(
-    Math.max(
-      window.scrollY -
-        start +
-        120,
-      0
-    ),
+    Math.max(window.scrollY - articleTop + 130, 0),
     total
   );
 
-  const percent = Math.min(
-    100,
-    (current / total) * 100
-  );
+  const percentage = Math.min(100, (current / total) * 100);
 
-  bar.style.width = `${percent}%`;
+  bar.style.width = `${percentage}%`;
 
   if (tocBar) {
-    tocBar.style.width =
-      `${percent}%`;
+    tocBar.style.width = `${percentage}%`;
   }
 }
 
 function initReadingProgress() {
-  window.addEventListener(
-    "scroll",
-    updateReadingProgress,
-    {
-      passive: true
-    }
-  );
+  if (!$("#articleContent")) {
+    return;
+  }
 
-  window.addEventListener(
-    "resize",
-    updateReadingProgress
-  );
+  window.addEventListener("scroll", updateReadingProgress, {
+    passive: true
+  });
+
+  window.addEventListener("resize", updateReadingProgress);
+
+  updateReadingProgress();
 }
-
-/* =========================
-   TABLE OF CONTENTS
-========================== */
 
 function initTableOfContents() {
   const headings = [
-    "article-section-1",
-    "article-section-2",
-    "article-section-3"
-  ]
-    .map(
-      id =>
-        document.getElementById(id)
-    )
-    .filter(Boolean);
+    $("#article-section-1"),
+    $("#article-section-2"),
+    $("#article-section-3")
+  ].filter(Boolean);
 
   const links = $$(
     '.toc-card a[href^="#article-section-"]'
   );
 
-  links.forEach(
-    link => {
-      link.addEventListener(
-        "click",
-        event => {
-          event.preventDefault();
+  links.forEach(link => {
+    link.addEventListener("click", event => {
+      event.preventDefault();
 
-          const target =
-            document.querySelector(
-              link.getAttribute("href")
-            );
+      const target = $(link.getAttribute("href"));
 
-          target?.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-        }
-      );
-    }
-  );
+      target?.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  });
 
-  if (
-    !(
-      "IntersectionObserver"
-      in window
-    )
-  ) {
+  if (!("IntersectionObserver" in window)) {
     return;
   }
 
-  const observer =
-    new IntersectionObserver(
-      entries => {
-        const visible = entries
-          .filter(
-            entry =>
-              entry.isIntersecting
-          )
-          .sort(
-            (a, b) =>
-              a.boundingClientRect.top -
-              b.boundingClientRect.top
-          )[0];
+  const observer = new IntersectionObserver(
+    entries => {
+      const visible = entries
+        .filter(entry => entry.isIntersecting)
+        .sort(
+          (a, b) =>
+            a.boundingClientRect.top - b.boundingClientRect.top
+        )[0];
 
-        if (!visible) {
-          return;
-        }
-
-        links.forEach(
-          link => {
-            link.classList.toggle(
-              "active",
-              link.getAttribute("href") ===
-                `#${visible.target.id}`
-            );
-          }
-        );
-      },
-      {
-        rootMargin:
-          "-25% 0px -60%",
-        threshold: [0, 1]
+      if (!visible) {
+        return;
       }
-    );
 
-  headings.forEach(
-    heading =>
-      observer.observe(heading)
-  );
-}
-
-/* =========================
-   FAQ
-========================== */
-
-function initFaq() {
-  $$(".faq-item > button").forEach(
-    button => {
-      button.addEventListener(
-        "click",
-        () => {
-          const item =
-            button.closest(".faq-item");
-
-          const open =
-            item.classList.toggle(
-              "open"
-            );
-
-          button.setAttribute(
-            "aria-expanded",
-            String(open)
-          );
-        }
-      );
+      links.forEach(link => {
+        link.classList.toggle(
+          "active",
+          link.getAttribute("href") === `#${visible.target.id}`
+        );
+      });
+    },
+    {
+      rootMargin: "-25% 0px -60%",
+      threshold: [0, 1]
     }
   );
+
+  headings.forEach(heading => observer.observe(heading));
 }
 
-/* =========================
-   SHARE BUTTONS
-========================== */
+function initFaq() {
+  $$(".faq-question").forEach(button => {
+    button.addEventListener("click", () => {
+      const item = button.closest(".faq-item");
+      const open = item.classList.toggle("open");
+
+      button.setAttribute("aria-expanded", String(open));
+    });
+  });
+}
 
 function shareArticle(network) {
-  const url =
-    `${location.origin}` +
-    `${location.pathname}` +
-    "#blog";
-
+  const url = window.location.href;
   const title =
     "Future of Artificial Intelligence in Modern Web Development";
 
-  const encodedUrl =
-    encodeURIComponent(url);
-
-  const encodedTitle =
-    encodeURIComponent(title);
+  const encodedUrl = encodeURIComponent(url);
+  const encodedTitle = encodeURIComponent(title);
 
   const targets = {
     facebook:
-      "https://www.facebook.com/sharer/sharer.php" +
-      `?u=${encodedUrl}`,
+      `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
 
     twitter:
-      "https://twitter.com/intent/tweet" +
-      `?url=${encodedUrl}` +
+      `https://twitter.com/intent/tweet?url=${encodedUrl}` +
       `&text=${encodedTitle}`,
 
     linkedin:
-      "https://www.linkedin.com/sharing/share-offsite/" +
-      `?url=${encodedUrl}`
+      `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`
   };
 
   if (network === "copy") {
     navigator.clipboard
       ?.writeText(url)
-      .then(
-        () =>
-          showToast(
-            "Article link copied"
-          )
-      )
-      .catch(
-        () =>
-          showToast(
-            `Copy this link: ${url}`
-          )
-      );
+      .then(() => showToast("Article link copied"))
+      .catch(() => showToast("Unable to copy the link"));
 
     return;
   }
@@ -771,866 +1203,205 @@ function shareArticle(network) {
 }
 
 function initSharing() {
-  $$("[data-share]").forEach(
-    button => {
-      button.addEventListener(
-        "click",
-        () =>
-          shareArticle(
-            button.dataset.share
-          )
-      );
-    }
-  );
+  $$("[data-share]").forEach(button => {
+    button.addEventListener("click", () => {
+      shareArticle(button.dataset.share);
+    });
+  });
 }
 
-/* =========================
-   COMMENTS
-========================== */
+function initializeLikeButton(button) {
+  button.addEventListener("click", () => {
+    const count = $("span", button);
+    const liked = button.classList.toggle("liked");
+
+    if (count) {
+      const current = Number(count.textContent) || 0;
+      count.textContent = String(Math.max(0, current + (liked ? 1 : -1)));
+    }
+
+    const icon = $("i", button);
+
+    if (icon) {
+      icon.className = liked
+        ? "fa-solid fa-thumbs-up"
+        : "fa-regular fa-thumbs-up";
+    }
+  });
+}
+
+function initializeReplyButton(button) {
+  button.addEventListener("click", () => {
+    const form = $("#commentForm");
+    const textarea = $('#commentForm textarea[name="comment"]');
+
+    form?.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+
+    if (textarea) {
+      textarea.focus();
+      textarea.placeholder = "Write your reply...";
+    }
+  });
+}
 
 function initComments() {
-  $$(".like-button").forEach(
-    button => {
-      button.addEventListener(
-        "click",
-        () => {
-          const count =
-            $("span", button);
+  $$(".like-button").forEach(initializeLikeButton);
+  $$(".reply-button").forEach(initializeReplyButton);
 
-          const liked =
-            button.classList.toggle(
-              "liked"
-            );
+  $("#jumpCommentForm")?.addEventListener("click", () => {
+    $("#commentForm")?.scrollIntoView({
+      behavior: "smooth"
+    });
+  });
 
-          if (count) {
-            count.textContent =
-              String(
-                Math.max(
-                  0,
-                  Number(
-                    count.textContent
-                  ) +
-                    (
-                      liked
-                        ? 1
-                        : -1
-                    )
-                )
-              );
-          }
+  $("#commentForm")?.addEventListener("submit", event => {
+    event.preventDefault();
 
-          const icon =
-            $("i", button);
+    const form = event.currentTarget;
 
-          if (icon) {
-            icon.className = liked
-              ? "fa-solid fa-thumbs-up"
-              : "fa-regular fa-thumbs-up";
-          }
-        }
-      );
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
     }
-  );
 
-  $$(".reply-button").forEach(
-    button => {
-      button.addEventListener(
-        "click",
-        () => {
-          $("#commentForm")
-            ?.scrollIntoView({
-              behavior: "smooth",
-              block: "center"
-            });
+    const formData = new FormData(form);
+    const name = escapeHtml(formData.get("name") || "Guest");
+    const comment = escapeHtml(formData.get("comment") || "");
 
-          const textarea = $(
-            '#commentForm textarea[name="comment"]'
-          );
+    const article = document.createElement("article");
 
-          if (textarea) {
-            textarea.focus();
+    article.className = "comment";
 
-            textarea.placeholder =
-              "Write your reply...";
-          }
-        }
-      );
-    }
-  );
-
-  $("#jumpCommentForm")
-    ?.addEventListener(
-      "click",
-      () =>
-        $("#commentForm")
-          ?.scrollIntoView({
-            behavior: "smooth"
-          })
-    );
-
-  $("#commentForm")
-    ?.addEventListener(
-      "submit",
-      event => {
-        event.preventDefault();
-
-        const form =
-          event.currentTarget;
-
-        const data =
-          new FormData(form);
-
-        const name =
-          escapeHtml(
-            data.get("name") ||
-            "Guest"
-          );
-
-        const commentText =
-          escapeHtml(
-            data.get("comment") ||
-            ""
-          );
-
-        const article =
-          document.createElement(
-            "article"
-          );
-
-        article.className =
-          "comment";
-
-        article.innerHTML = `
-          <img
-            src="https://i.pravatar.cc/100?u=${encodeURIComponent(name)}"
-            alt="${name} avatar"
-          >
-
-          <div class="comment-content">
-
-            <div class="comment-top">
-
-              <div>
-
-                <strong>${name}</strong>
-
-                <time>Just now</time>
-
-              </div>
-
-            </div>
-
-            <p>${commentText}</p>
-
-            <div class="comment-actions">
-
-              <button
-                class="like-button"
-                type="button"
-              >
-
-                <i class="fa-regular fa-thumbs-up"></i>
-
-                Like
-
-                <span>0</span>
-
-              </button>
-
-              <button
-                class="reply-button"
-                type="button"
-              >
-
-                <i class="fa-solid fa-reply"></i>
-
-                Reply
-
-              </button>
-
-            </div>
-
-          </div>
-        `;
-
-        $(".comment-list")
-          ?.append(article);
-
-        form.reset();
-
-        showToast(
-          "Comment added successfully"
-        );
-
-        const likeButton =
-          $(".like-button", article);
-
-        likeButton
-          ?.addEventListener(
-            "click",
-            () => {
-              likeButton.classList
-                .toggle("liked");
-
-              const count =
-                $("span", likeButton);
-
-              if (count) {
-                count.textContent =
-                  likeButton.classList
-                    .contains("liked")
-                    ? "1"
-                    : "0";
-              }
-            }
-          );
-      }
-    );
-}
-
-/* =========================
-   CATEGORY PAGE
-========================== */
-
-function getFilteredCategoryPosts() {
-  return state.categoryFilter ===
-    "all"
-    ? posts
-    : posts.filter(
-        post =>
-          post.category ===
-          state.categoryFilter
-      );
-}
-
-function postCardTemplate(post) {
-  const badgeClass =
-    post.category === "AI"
-      ? "badge-red"
-      : post.category === "SEO"
-        ? "badge-purple"
-        : post.category ===
-            "Security"
-          ? "badge-green"
-          : "badge-blue";
-
-  return `
-    <article class="post-card">
-
-      <a href="#blog">
-
-        <img
-          src="${post.image}"
-          alt="${escapeHtml(post.title)}"
-        >
-
-      </a>
-
-      <div class="post-card-body">
-
-        <span class="badge ${badgeClass}">
-          ${escapeHtml(post.category)}
-        </span>
-
-        <h3>
-
-          <a href="#blog">
-            ${escapeHtml(post.title)}
-          </a>
-
-        </h3>
-
-        <p>
-          ${escapeHtml(post.excerpt)}
-        </p>
-
-        <div class="card-meta">
-
-          <span>
-            ${formatDate(post.date)}
-          </span>
-
-          <span>
-
-            <i class="fa-regular fa-comment"></i>
-
-            ${post.comments}
-
-          </span>
-
-        </div>
-
-      </div>
-
-    </article>
-  `;
-}
-
-function renderCategoryPosts() {
-  const grid =
-    $("#categoryGrid");
-
-  const pagination =
-    $("#categoryPagination");
-
-  const count =
-    $("#categoryResultCount");
-
-  if (!grid || !pagination) {
-    return;
-  }
-
-  const filtered =
-    getFilteredCategoryPosts();
-
-  const perPage = 6;
-
-  const pages = Math.max(
-    1,
-    Math.ceil(
-      filtered.length /
-      perPage
-    )
-  );
-
-  state.categoryPage =
-    Math.min(
-      state.categoryPage,
-      pages
-    );
-
-  const start =
-    (
-      state.categoryPage -
-      1
-    ) *
-    perPage;
-
-  grid.innerHTML =
-    filtered
-      .slice(
-        start,
-        start + perPage
-      )
-      .map(postCardTemplate)
-      .join("");
-
-  if (count) {
-    count.textContent =
-      `Showing ${
-        filtered.length
-          ? start + 1
-          : 0
-      }–${
-        Math.min(
-          start + perPage,
-          filtered.length
-        )
-      } of ${
-        filtered.length
-      } articles`;
-  }
-
-  const buttons = [];
-
-  buttons.push(`
-    <button
-      type="button"
-      data-page-number="${
-        state.categoryPage - 1
-      }"
-      ${
-        state.categoryPage === 1
-          ? "disabled"
-          : ""
-      }
-      aria-label="Previous page"
-    >
-      <i class="fa-solid fa-chevron-left"></i>
-    </button>
-  `);
-
-  for (
-    let page = 1;
-    page <= pages;
-    page += 1
-  ) {
-    buttons.push(`
-      <button
-        type="button"
-        data-page-number="${page}"
-        class="${
-          page ===
-          state.categoryPage
-            ? "active"
-            : ""
-        }"
+    article.innerHTML = `
+      <img
+        src="https://i.pravatar.cc/100?u=${encodeURIComponent(name)}"
+        alt="${name} avatar"
       >
-        ${page}
-      </button>
-    `);
-  }
 
-  buttons.push(`
-    <button
-      type="button"
-      data-page-number="${
-        state.categoryPage + 1
-      }"
-      ${
-        state.categoryPage ===
-        pages
-          ? "disabled"
-          : ""
-      }
-      aria-label="Next page"
-    >
-      <i class="fa-solid fa-chevron-right"></i>
-    </button>
-  `);
+      <div class="comment-content">
 
-  pagination.innerHTML =
-    buttons.join("");
+        <div class="comment-top">
 
-  $$(
-    "[data-page-number]",
-    pagination
-  ).forEach(
-    button => {
-      button.addEventListener(
-        "click",
-        () => {
-          if (button.disabled) {
-            return;
-          }
+          <div class="comment-user">
+            <strong>${name}</strong>
+            <time>Just now</time>
+          </div>
 
-          state.categoryPage =
-            Number(
-              button.dataset
-                .pageNumber
-            );
+        </div>
 
-          renderCategoryPosts();
+        <p>${comment}</p>
 
-          $("#categoryGrid")
-            ?.scrollIntoView({
-              behavior: "smooth",
-              block: "start"
-            });
-        }
-      );
-    }
-  );
-}
+        <div class="comment-actions">
 
-function initCategory() {
-  $("#categorySelect")
-    ?.addEventListener(
-      "change",
-      event => {
-        state.categoryFilter =
-          event.target.value;
+          <button class="like-button" type="button">
+            <i class="fa-regular fa-thumbs-up"></i>
+            Like
+            <span>0</span>
+          </button>
 
-        state.categoryPage = 1;
-
-        renderCategoryPosts();
-      }
-    );
-
-  renderCategoryPosts();
-}
-
-/* =========================
-   SEARCH PAGE
-========================== */
-
-function searchResultTemplate(post) {
-  const badgeClass =
-    post.category === "AI"
-      ? "badge-red"
-      : post.category === "SEO"
-        ? "badge-purple"
-        : post.category ===
-            "Security"
-          ? "badge-green"
-          : "badge-blue";
-
-  return `
-    <article class="search-result-card">
-
-      <a href="#blog">
-
-        <img
-          src="${post.image}"
-          alt="${escapeHtml(post.title)}"
-        >
-
-      </a>
-
-      <div>
-
-        <span class="badge ${badgeClass}">
-          ${escapeHtml(post.category)}
-        </span>
-
-        <h3>
-
-          <a href="#blog">
-            ${escapeHtml(post.title)}
-          </a>
-
-        </h3>
-
-        <p>
-          ${escapeHtml(post.excerpt)}
-        </p>
-
-        <div class="post-meta">
-
-          <span>
-
-            <i class="fa-regular fa-calendar"></i>
-
-            ${formatDate(post.date)}
-
-          </span>
-
-          <span>
-
-            <i class="fa-regular fa-clock"></i>
-
-            ${post.read}
-
-          </span>
-
-          <span>
-
-            <i class="fa-regular fa-eye"></i>
-
-            ${post.views.toLocaleString()}
-
-          </span>
-
-          <span>
-
-            <i class="fa-regular fa-comment"></i>
-
-            ${post.comments}
-
-          </span>
+          <button class="reply-button" type="button">
+            <i class="fa-solid fa-reply"></i>
+            Reply
+          </button>
 
         </div>
 
       </div>
+    `;
 
-    </article>
-  `;
+    $(".comment-list")?.append(article);
+
+    initializeLikeButton($(".like-button", article));
+    initializeReplyButton($(".reply-button", article));
+
+    form.reset();
+    showToast("Comment added successfully");
+  });
 }
 
-function renderSearchResults() {
-  const results =
-    $("#searchResults");
-
-  const empty =
-    $("#emptySearch");
-
-  const heading =
-    $("#searchHeading");
-
-  const count =
-    $("#searchCount");
-
-  if (!results || !empty) {
+function initSingleBlogPage() {
+  if (!$("#articleContent")) {
     return;
   }
 
-  const term =
-    state.searchTerm
-      .trim()
-      .toLowerCase();
-
-  let filtered =
-    posts.filter(
-      post =>
-        !term ||
-        (
-          `${post.title} ` +
-          `${post.category} ` +
-          `${post.excerpt}`
-        )
-          .toLowerCase()
-          .includes(term)
-    );
-
-  filtered =
-    [...filtered].sort(
-      (a, b) => {
-        if (
-          state.searchSort ===
-          "popular"
-        ) {
-          return b.views - a.views;
-        }
-
-        if (
-          state.searchSort ===
-          "oldest"
-        ) {
-          return (
-            new Date(a.date) -
-            new Date(b.date)
-          );
-        }
-
-        return (
-          new Date(b.date) -
-          new Date(a.date)
-        );
-      }
-    );
-
-  if (heading) {
-    heading.textContent =
-      term
-        ? `Results for “${state.searchTerm.trim()}”`
-        : "All Articles";
-  }
-
-  if (count) {
-    count.textContent =
-      `${filtered.length} article${
-        filtered.length === 1
-          ? ""
-          : "s"
-      } found`;
-  }
-
-  results.innerHTML =
-    filtered
-      .map(searchResultTemplate)
-      .join("");
-
-  results.hidden =
-    filtered.length === 0;
-
-  empty.hidden =
-    filtered.length !== 0;
-
-  if ($("#largeSearchInput")) {
-    $("#largeSearchInput").value =
-      state.searchTerm;
-  }
-}
-
-function submitSearch(term) {
-  state.searchTerm =
-    term.trim();
-
-  location.hash = "search";
-
-  if (getRoute() === "search") {
-    renderSearchResults();
-
-    setTimeout(
-      () =>
-        $("#searchResults")
-          ?.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          }),
-      50
-    );
-  }
-}
-
-function initSearch() {
-  $("#headerSearchForm")
-    ?.addEventListener(
-      "submit",
-      event => {
-        event.preventDefault();
-
-        submitSearch(
-          $("#headerSearchInput")
-            ?.value || ""
-        );
-      }
-    );
-
-  $("#largeSearchForm")
-    ?.addEventListener(
-      "submit",
-      event => {
-        event.preventDefault();
-
-        state.searchTerm =
-          $("#largeSearchInput")
-            ?.value
-            .trim() || "";
-
-        renderSearchResults();
-      }
-    );
-
-  $$("[data-search-term]")
-    .forEach(
-      button => {
-        button.addEventListener(
-          "click",
-          () => {
-            state.searchTerm =
-              button.dataset
-                .searchTerm || "";
-
-            renderSearchResults();
-          }
-        );
-      }
-    );
-
-  $$("[data-sort]")
-    .forEach(
-      button => {
-        button.addEventListener(
-          "click",
-          () => {
-            state.searchSort =
-              button.dataset.sort;
-
-            $$("[data-sort]")
-              .forEach(
-                item => {
-                  item.classList
-                    .toggle(
-                      "active",
-                      item === button
-                    );
-                }
-              );
-
-            renderSearchResults();
-          }
-        );
-      }
-    );
-
-  $("#clearSearch")
-    ?.addEventListener(
-      "click",
-      () => {
-        state.searchTerm = "";
-
-        renderSearchResults();
-
-        $("#largeSearchInput")
-          ?.focus();
-      }
-    );
-
-  $("#notFoundSearch")
-    ?.addEventListener(
-      "submit",
-      event => {
-        event.preventDefault();
-
-        submitSearch(
-          $("input", event.currentTarget)
-            ?.value || ""
-        );
-      }
-    );
-
-  renderSearchResults();
-}
-
-/* =========================
-   FORMS
-========================== */
-
-function initForms() {
-  $$(".newsletter-form")
-    .forEach(
-      form => {
-        form.addEventListener(
-          "submit",
-          event => {
-            event.preventDefault();
-
-            form.reset();
-
-            showToast(
-              "Thanks for subscribing!"
-            );
-          }
-        );
-      }
-    );
-
-  $("#contactForm")
-    ?.addEventListener(
-      "submit",
-      event => {
-        event.preventDefault();
-
-        const form =
-          event.currentTarget;
-
-        if (!form.checkValidity()) {
-          form.reportValidity();
-          return;
-        }
-
-        form.reset();
-
-        showToast(
-          "Your message has been sent successfully"
-        );
-      }
-    );
-}
-
-/* =========================
-   GLOBAL LINKS
-========================== */
-
-function initGlobalLinks() {
-  $$('a[href="#"]')
-    .forEach(
-      link => {
-        link.addEventListener(
-          "click",
-          event =>
-            event.preventDefault()
-        );
-      }
-    );
-
-  $("#currentYear").textContent =
-    String(
-      new Date().getFullYear()
-    );
-}
-
-/* =========================
-   INITIALIZE WEBSITE
-========================== */
-
-function init() {
-  initTheme();
-  initMobileMenu();
-  initRouter();
   initReadingProgress();
   initTableOfContents();
   initFaq();
   initSharing();
   initComments();
-  initCategory();
-  initSearch();
-  initForms();
+}
+
+/* =========================================================
+   CONTACT PAGE
+========================================================= */
+
+function initContactForm() {
+  $("#contactForm")?.addEventListener("submit", event => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    form.reset();
+    showToast("Your message has been sent successfully");
+  });
+}
+
+/* =========================================================
+   404 SEARCH
+========================================================= */
+
+function initNotFoundSearch() {
+  $("#notFoundSearch")?.addEventListener("submit", event => {
+    event.preventDefault();
+
+    const input = $('input[name="q"]', event.currentTarget);
+    const query = input?.value.trim() || "";
+
+    window.location.href =
+      `search.html?q=${encodeURIComponent(query)}`;
+  });
+}
+
+/* =========================================================
+   GLOBAL INITIALIZATION
+========================================================= */
+
+function initGlobalLinks() {
+  $$('a[href="#"]').forEach(link => {
+    link.addEventListener("click", event => {
+      event.preventDefault();
+    });
+  });
+}
+
+function initializeWebsite() {
+  renderHeader();
+  renderFooter();
+
+  const year = $("#currentYear");
+
+  if (year) {
+    year.textContent = String(new Date().getFullYear());
+  }
+
+  initTheme();
+  initMobileMenu();
+  initGlobalSearch();
+  initNewsletterForms();
+  initCategoryPage();
+  initSearchPage();
+  initSingleBlogPage();
+  initContactForm();
+  initNotFoundSearch();
   initGlobalLinks();
 }
 
-document.addEventListener(
-  "DOMContentLoaded",
-  init
-);
+document.addEventListener("DOMContentLoaded", initializeWebsite);
