@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,124 +52,8 @@
             }
         };
     </script>
-
-    <style>
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-padding-top: 9rem;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            overflow-x: hidden;
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-        }
-
-        button,
-        input {
-            font: inherit;
-        }
-
-        a,
-        button {
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .hover-lift:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.13);
-        }
-
-        .mega-menu {
-            visibility: hidden;
-            opacity: 0;
-            transform: translateY(8px);
-            pointer-events: none;
-            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-        }
-
-        .menu-item:hover .mega-menu,
-        .menu-item:focus-within .mega-menu {
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
-        }
-
-        .mobile-menu {
-            display: none;
-        }
-
-        .mobile-menu.active {
-            display: block;
-        }
-
-        .mobile-submenu {
-            display: none;
-        }
-
-        .mobile-submenu.active {
-            display: block;
-        }
-
-        .line-clamp-2 {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
-            overflow: hidden;
-        }
-
-        .line-clamp-3 {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-            overflow: hidden;
-        }
-
-        .heart-active {
-            color: #dc2626;
-            background: #fee2e2 !important;
-        }
-
-        .search-result-hidden {
-            display: none !important;
-        }
-
-        .ad-slot {
-            border: 1px dashed rgba(100, 116, 139, 0.45);
-        }
-
-        @media (max-width: 1023px) {
-            html {
-                scroll-padding-top: 5rem;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                scroll-behavior: auto !important;
-                transition-duration: 0.01ms !important;
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-            }
-        }
-    </style>
+<link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-slate-100 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
@@ -202,7 +87,8 @@
     </div>
 
     <!-- Main Header -->
-    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 shadow-soft backdrop-blur dark:border-slate-700 dark:bg-darkbg/95">
+    <header
+        class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 shadow-soft backdrop-blur dark:border-slate-700 dark:bg-darkbg/95">
         <div class="container">
             <div class="flex min-h-[76px] items-center justify-between gap-4 py-3 lg:min-h-[90px]">
                 <a href="#" class="shrink-0" aria-label="TechBlog homepage">
@@ -252,7 +138,8 @@
                         </a>
 
                         <div class="mega-menu absolute left-0 top-full z-50 w-[700px] pt-4">
-                            <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-2xl dark:border-slate-700 dark:bg-darkcard">
+                            <div
+                                class="rounded-2xl border border-slate-200 bg-white p-7 shadow-2xl dark:border-slate-700 dark:bg-darkcard">
                                 <div class="grid grid-cols-3 gap-7">
                                     <div>
                                         <h3 class="mb-3 font-bold text-primary">Programming</h3>
@@ -298,44 +185,65 @@
         </nav>
 
         <!-- Mobile Navigation -->
-        <div id="mobileMenu" class="mobile-menu border-t border-slate-200 bg-white dark:border-slate-700 dark:bg-darkbg lg:hidden">
+        <div id="mobileMenu"
+            class="mobile-menu border-t border-slate-200 bg-white dark:border-slate-700 dark:bg-darkbg lg:hidden">
             <div class="container max-h-[calc(100vh-76px)] overflow-y-auto py-5">
                 <form id="mobileSearchForm" class="mb-5" role="search">
                     <label for="mobileSearch" class="sr-only">Search articles</label>
                     <div class="flex gap-2">
                         <input id="mobileSearch" type="search" placeholder="Search articles..."
                             class="min-w-0 flex-1 rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-primary dark:border-slate-600 dark:bg-darkcard dark:text-white">
-                        <button type="submit" class="rounded-xl bg-primary px-4 font-semibold text-white">Search</button>
+                        <button type="submit"
+                            class="rounded-xl bg-primary px-4 font-semibold text-white">Search</button>
                     </div>
                 </form>
 
                 <ul class="space-y-1 font-semibold">
-                    <li><a href="#" class="block rounded-lg px-3 py-3 text-primary hover:bg-slate-100 dark:hover:bg-slate-800">Home</a></li>
+                    <li><a href="#"
+                            class="block rounded-lg px-3 py-3 text-primary hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
+                    </li>
                     <li>
                         <button id="mobileTechnologyBtn" type="button"
                             class="flex w-full items-center justify-between rounded-lg px-3 py-3 text-left hover:bg-slate-100 dark:hover:bg-slate-800"
                             aria-controls="mobileTechnologyMenu" aria-expanded="false">
                             Technology <span id="mobileTechnologyIcon" aria-hidden="true">＋</span>
                         </button>
-                        <ul id="mobileTechnologyMenu" class="mobile-submenu ml-4 border-l border-slate-200 pl-4 dark:border-slate-700">
+                        <ul id="mobileTechnologyMenu"
+                            class="mobile-submenu ml-4 border-l border-slate-200 pl-4 dark:border-slate-700">
                             <li><a href="#" class="block py-2 text-sm font-normal hover:text-primary">Laravel</a></li>
-                            <li><a href="#" class="block py-2 text-sm font-normal hover:text-primary">JavaScript</a></li>
+                            <li><a href="#" class="block py-2 text-sm font-normal hover:text-primary">JavaScript</a>
+                            </li>
                             <li><a href="#" class="block py-2 text-sm font-normal hover:text-primary">Python</a></li>
-                            <li><a href="#" class="block py-2 text-sm font-normal hover:text-primary">Web Development</a></li>
+                            <li><a href="#" class="block py-2 text-sm font-normal hover:text-primary">Web
+                                    Development</a></li>
                         </ul>
                     </li>
-                    <li><a href="#health" class="block rounded-lg px-3 py-3 hover:bg-slate-100 dark:hover:bg-slate-800">Health</a></li>
-                    <li><a href="#business" class="block rounded-lg px-3 py-3 hover:bg-slate-100 dark:hover:bg-slate-800">Business</a></li>
-                    <li><a href="#seo" class="block rounded-lg px-3 py-3 hover:bg-slate-100 dark:hover:bg-slate-800">SEO</a></li>
-                    <li><a href="#ai" class="block rounded-lg px-3 py-3 hover:bg-slate-100 dark:hover:bg-slate-800">AI</a></li>
-                    <li><a href="#education" class="block rounded-lg px-3 py-3 hover:bg-slate-100 dark:hover:bg-slate-800">Education</a></li>
-                    <li><a href="#lifestyle" class="block rounded-lg px-3 py-3 hover:bg-slate-100 dark:hover:bg-slate-800">Lifestyle</a></li>
-                    <li><a href="#contact" class="block rounded-lg px-3 py-3 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a></li>
+                    <li><a href="#health"
+                            class="block rounded-lg px-3 py-3 hover:bg-slate-100 dark:hover:bg-slate-800">Health</a>
+                    </li>
+                    <li><a href="#business"
+                            class="block rounded-lg px-3 py-3 hover:bg-slate-100 dark:hover:bg-slate-800">Business</a>
+                    </li>
+                    <li><a href="#seo"
+                            class="block rounded-lg px-3 py-3 hover:bg-slate-100 dark:hover:bg-slate-800">SEO</a></li>
+                    <li><a href="#ai"
+                            class="block rounded-lg px-3 py-3 hover:bg-slate-100 dark:hover:bg-slate-800">AI</a></li>
+                    <li><a href="#education"
+                            class="block rounded-lg px-3 py-3 hover:bg-slate-100 dark:hover:bg-slate-800">Education</a>
+                    </li>
+                    <li><a href="#lifestyle"
+                            class="block rounded-lg px-3 py-3 hover:bg-slate-100 dark:hover:bg-slate-800">Lifestyle</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="block rounded-lg px-3 py-3 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
+                    </li>
                 </ul>
 
                 <div class="mt-5 grid grid-cols-2 gap-3 border-t border-slate-200 pt-5 dark:border-slate-700">
-                    <button type="button" class="rounded-lg border border-slate-300 px-4 py-2.5 font-semibold dark:border-slate-600">Login</button>
-                    <button type="button" class="rounded-lg bg-primary px-4 py-2.5 font-semibold text-white">Register</button>
+                    <button type="button"
+                        class="rounded-lg border border-slate-300 px-4 py-2.5 font-semibold dark:border-slate-600">Login</button>
+                    <button type="button"
+                        class="rounded-lg bg-primary px-4 py-2.5 font-semibold text-white">Register</button>
                 </div>
             </div>
         </div>
@@ -344,7 +252,8 @@
     <main id="main-content">
         <!-- Header Advertisement -->
         <section class="container py-5 sm:py-6" aria-label="Advertisement">
-            <div class="ad-slot flex min-h-[82px] items-center justify-center rounded-xl bg-slate-200 px-4 text-center font-semibold text-slate-500 dark:bg-darkcard dark:text-slate-400 sm:min-h-[90px]">
+            <div
+                class="ad-slot flex min-h-[82px] items-center justify-center rounded-xl bg-slate-200 px-4 text-center font-semibold text-slate-500 dark:bg-darkcard dark:text-slate-400 sm:min-h-[90px]">
                 Responsive Header Advertisement · 728 × 90
             </div>
         </section>
@@ -353,19 +262,22 @@
         <section id="technology" class="container pb-8 pt-2 sm:pb-10 sm:pt-4">
             <div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
                 <!-- Featured Article -->
-                <article class="group relative min-h-[500px] overflow-hidden rounded-2xl shadow-soft sm:min-h-[540px] lg:col-span-8 lg:min-h-[610px]">
+                <article
+                    class="group relative min-h-[500px] overflow-hidden rounded-2xl shadow-soft sm:min-h-[540px] lg:col-span-8 lg:min-h-[610px]">
                     <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&auto=format&fit=crop&q=85"
                         alt="Close-up view of a modern electronic circuit board" width="1400" height="900"
                         class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/5"></div>
 
                     <div class="absolute inset-x-0 bottom-0 p-5 text-white sm:p-8 lg:p-10">
-                        <span class="inline-block rounded-full bg-blue-600 px-4 py-1.5 text-sm font-semibold">Technology</span>
+                        <span
+                            class="inline-block rounded-full bg-blue-600 px-4 py-1.5 text-sm font-semibold">Technology</span>
                         <h1 class="mt-4 max-w-4xl text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
                             Future of Artificial Intelligence in Modern Web Development
                         </h1>
                         <p class="mt-4 max-w-3xl text-sm leading-6 text-slate-200 sm:text-base sm:leading-7 lg:text-lg">
-                            Discover how artificial intelligence is transforming frontend development, backend automation,
+                            Discover how artificial intelligence is transforming frontend development, backend
+                            automation,
                             SEO, cybersecurity and modern software engineering.
                         </p>
                         <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-300 sm:text-sm">
@@ -390,48 +302,56 @@
 
                 <!-- Featured Cards -->
                 <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:col-span-4 lg:grid-cols-1">
-                    <article data-search-card class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
+                    <article data-search-card
+                        class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
                         <div class="relative overflow-hidden sm:h-44 lg:h-36 xl:h-40">
                             <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&auto=format&fit=crop&q=80"
                                 alt="Medical professional using a digital tablet" width="900" height="600"
                                 class="h-44 w-full object-cover transition duration-700 group-hover:scale-110 sm:h-full">
-                            <span class="absolute left-3 top-3 rounded-full bg-green-600 px-3 py-1 text-xs text-white">Health</span>
+                            <span
+                                class="absolute left-3 top-3 rounded-full bg-green-600 px-3 py-1 text-xs text-white">Health</span>
                             <button type="button" data-heart
                                 class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white text-slate-700 shadow transition hover:scale-105"
                                 aria-label="Add article to favorites" aria-pressed="false">♡</button>
                         </div>
                         <div class="p-5">
-                            <h2 class="line-clamp-2 text-lg font-bold leading-7">Best Healthy Lifestyle Tips for Developers</h2>
+                            <h2 class="line-clamp-2 text-lg font-bold leading-7">Best Healthy Lifestyle Tips for
+                                Developers</h2>
                             <div class="mt-4 flex justify-between text-sm text-slate-500 dark:text-slate-400">
                                 <span>Jul 18, 2026</span><span>5 min</span>
                             </div>
                         </div>
                     </article>
 
-                    <article data-search-card class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
+                    <article data-search-card
+                        class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
                         <div class="relative overflow-hidden sm:h-44 lg:h-36 xl:h-40">
                             <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=900&auto=format&fit=crop&q=80"
                                 alt="Business colleagues working together" width="900" height="600"
                                 class="h-44 w-full object-cover transition duration-700 group-hover:scale-110 sm:h-full">
-                            <span class="absolute left-3 top-3 rounded-full bg-blue-600 px-3 py-1 text-xs text-white">Business</span>
+                            <span
+                                class="absolute left-3 top-3 rounded-full bg-blue-600 px-3 py-1 text-xs text-white">Business</span>
                             <button type="button" data-heart
                                 class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white text-slate-700 shadow transition hover:scale-105"
                                 aria-label="Add article to favorites" aria-pressed="false">♡</button>
                         </div>
                         <div class="p-5">
-                            <h2 class="line-clamp-2 text-lg font-bold leading-7">10 Startup Ideas That Will Dominate 2026</h2>
+                            <h2 class="line-clamp-2 text-lg font-bold leading-7">10 Startup Ideas That Will Dominate
+                                2026</h2>
                             <div class="mt-4 flex justify-between text-sm text-slate-500 dark:text-slate-400">
                                 <span>Jul 17, 2026</span><span>6 min</span>
                             </div>
                         </div>
                     </article>
 
-                    <article data-search-card class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
+                    <article data-search-card
+                        class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
                         <div class="relative overflow-hidden sm:h-44 lg:h-36 xl:h-40">
                             <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&auto=format&fit=crop&q=80"
                                 alt="Person working on a laptop" width="900" height="600"
                                 class="h-44 w-full object-cover transition duration-700 group-hover:scale-110 sm:h-full">
-                            <span class="absolute left-3 top-3 rounded-full bg-purple-600 px-3 py-1 text-xs text-white">SEO</span>
+                            <span
+                                class="absolute left-3 top-3 rounded-full bg-purple-600 px-3 py-1 text-xs text-white">SEO</span>
                             <button type="button" data-heart
                                 class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white text-slate-700 shadow transition hover:scale-105"
                                 aria-label="Add article to favorites" aria-pressed="false">♡</button>
@@ -444,18 +364,21 @@
                         </div>
                     </article>
 
-                    <article data-search-card class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
+                    <article data-search-card
+                        class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
                         <div class="relative overflow-hidden sm:h-44 lg:h-36 xl:h-40">
                             <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?w=900&auto=format&fit=crop&q=80"
                                 alt="Developer working at a modern workstation" width="900" height="600"
                                 class="h-44 w-full object-cover transition duration-700 group-hover:scale-110 sm:h-full">
-                            <span class="absolute left-3 top-3 rounded-full bg-red-600 px-3 py-1 text-xs text-white">AI</span>
+                            <span
+                                class="absolute left-3 top-3 rounded-full bg-red-600 px-3 py-1 text-xs text-white">AI</span>
                             <button type="button" data-heart
                                 class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white text-slate-700 shadow transition hover:scale-105"
                                 aria-label="Add article to favorites" aria-pressed="false">♡</button>
                         </div>
                         <div class="p-5">
-                            <h2 class="line-clamp-2 text-lg font-bold leading-7">Top AI Tools Every Content Creator Should Use</h2>
+                            <h2 class="line-clamp-2 text-lg font-bold leading-7">Top AI Tools Every Content Creator
+                                Should Use</h2>
                             <div class="mt-4 flex justify-between text-sm text-slate-500 dark:text-slate-400">
                                 <span>Jul 15, 2026</span><span>4 min</span>
                             </div>
@@ -467,7 +390,8 @@
 
         <!-- Billboard Advertisement -->
         <section class="container py-6" aria-label="Advertisement">
-            <div class="ad-slot flex min-h-[170px] items-center justify-center rounded-2xl bg-slate-200 px-4 text-center text-xl font-bold text-slate-500 dark:bg-darkcard dark:text-slate-400 sm:min-h-[220px] lg:min-h-[250px]">
+            <div
+                class="ad-slot flex min-h-[170px] items-center justify-center rounded-2xl bg-slate-200 px-4 text-center text-xl font-bold text-slate-500 dark:bg-darkcard dark:text-slate-400 sm:min-h-[220px] lg:min-h-[250px]">
                 Responsive Billboard Advertisement · 970 × 250
             </div>
         </section>
@@ -478,65 +402,84 @@
                 <div>
                     <span class="font-semibold uppercase tracking-widest text-blue-600">Trending</span>
                     <h2 id="trending-title" class="mt-2 text-3xl font-extrabold sm:text-4xl">🔥 Trending Articles</h2>
-                    <p class="mt-2 text-slate-500 dark:text-slate-400">Discover the most popular stories people are reading today.</p>
+                    <p class="mt-2 text-slate-500 dark:text-slate-400">Discover the most popular stories people are
+                        reading today.</p>
                 </div>
-                <a href="#latest" class="hidden rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700 sm:inline-block">View All →</a>
+                <a href="#latest"
+                    class="hidden rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700 sm:inline-block">View
+                    All →</a>
             </div>
 
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
-                <article data-search-card class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
+                <article data-search-card
+                    class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
                     <div class="relative overflow-hidden">
-                        <img src="https://picsum.photos/600/400?random=11" alt="Laravel programming tutorial illustration"
-                            width="600" height="400" loading="lazy"
+                        <img src="https://picsum.photos/600/400?random=11"
+                            alt="Laravel programming tutorial illustration" width="600" height="400" loading="lazy"
                             class="h-52 w-full object-cover transition duration-700 group-hover:scale-110 sm:h-56">
-                        <span class="absolute left-4 top-4 rounded-full bg-blue-600 px-3 py-1 text-xs text-white">Technology</span>
+                        <span
+                            class="absolute left-4 top-4 rounded-full bg-blue-600 px-3 py-1 text-xs text-white">Technology</span>
                     </div>
                     <div class="p-6">
                         <h3 class="line-clamp-2 text-xl font-bold">Laravel 12 Complete Beginner Guide</h3>
-                        <p class="line-clamp-2 mt-3 text-sm text-slate-500 dark:text-slate-400">Learn Laravel step by step with practical examples.</p>
-                        <div class="mt-5 flex justify-between text-sm text-slate-500 dark:text-slate-400"><span>Jul 18, 2026</span><span>8 min</span></div>
+                        <p class="line-clamp-2 mt-3 text-sm text-slate-500 dark:text-slate-400">Learn Laravel step by
+                            step with practical examples.</p>
+                        <div class="mt-5 flex justify-between text-sm text-slate-500 dark:text-slate-400"><span>Jul 18,
+                                2026</span><span>8 min</span></div>
                     </div>
                 </article>
 
-                <article data-search-card class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
+                <article data-search-card
+                    class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
                     <div class="relative overflow-hidden">
                         <img src="https://picsum.photos/600/400?random=12" alt="Health and physical therapy article"
                             width="600" height="400" loading="lazy"
                             class="h-52 w-full object-cover transition duration-700 group-hover:scale-110 sm:h-56">
-                        <span class="absolute left-4 top-4 rounded-full bg-green-600 px-3 py-1 text-xs text-white">Health</span>
+                        <span
+                            class="absolute left-4 top-4 rounded-full bg-green-600 px-3 py-1 text-xs text-white">Health</span>
                     </div>
                     <div class="p-6">
                         <h3 class="line-clamp-2 text-xl font-bold">Pelvic Floor Therapy Benefits Explained</h3>
-                        <p class="line-clamp-2 mt-3 text-sm text-slate-500 dark:text-slate-400">Everything you should know before starting therapy.</p>
-                        <div class="mt-5 flex justify-between text-sm text-slate-500 dark:text-slate-400"><span>Jul 17, 2026</span><span>6 min</span></div>
+                        <p class="line-clamp-2 mt-3 text-sm text-slate-500 dark:text-slate-400">Everything you should
+                            know before starting therapy.</p>
+                        <div class="mt-5 flex justify-between text-sm text-slate-500 dark:text-slate-400"><span>Jul 17,
+                                2026</span><span>6 min</span></div>
                     </div>
                 </article>
 
-                <article data-search-card class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
+                <article data-search-card
+                    class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
                     <div class="relative overflow-hidden">
                         <img src="https://picsum.photos/600/400?random=13" alt="Search engine optimization dashboard"
                             width="600" height="400" loading="lazy"
                             class="h-52 w-full object-cover transition duration-700 group-hover:scale-110 sm:h-56">
-                        <span class="absolute left-4 top-4 rounded-full bg-purple-600 px-3 py-1 text-xs text-white">SEO</span>
+                        <span
+                            class="absolute left-4 top-4 rounded-full bg-purple-600 px-3 py-1 text-xs text-white">SEO</span>
                     </div>
                     <div class="p-6">
                         <h3 class="line-clamp-2 text-xl font-bold">Google SEO Ranking Factors in 2026</h3>
-                        <p class="line-clamp-2 mt-3 text-sm text-slate-500 dark:text-slate-400">The latest ranking factors every blogger should know.</p>
-                        <div class="mt-5 flex justify-between text-sm text-slate-500 dark:text-slate-400"><span>Jul 16, 2026</span><span>9 min</span></div>
+                        <p class="line-clamp-2 mt-3 text-sm text-slate-500 dark:text-slate-400">The latest ranking
+                            factors every blogger should know.</p>
+                        <div class="mt-5 flex justify-between text-sm text-slate-500 dark:text-slate-400"><span>Jul 16,
+                                2026</span><span>9 min</span></div>
                     </div>
                 </article>
 
-                <article data-search-card class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
+                <article data-search-card
+                    class="group overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
                     <div class="relative overflow-hidden">
-                        <img src="https://picsum.photos/600/400?random=14" alt="Artificial intelligence tools for developers"
-                            width="600" height="400" loading="lazy"
+                        <img src="https://picsum.photos/600/400?random=14"
+                            alt="Artificial intelligence tools for developers" width="600" height="400" loading="lazy"
                             class="h-52 w-full object-cover transition duration-700 group-hover:scale-110 sm:h-56">
-                        <span class="absolute left-4 top-4 rounded-full bg-red-600 px-3 py-1 text-xs text-white">AI</span>
+                        <span
+                            class="absolute left-4 top-4 rounded-full bg-red-600 px-3 py-1 text-xs text-white">AI</span>
                     </div>
                     <div class="p-6">
                         <h3 class="line-clamp-2 text-xl font-bold">Top AI Tools Every Developer Needs</h3>
-                        <p class="line-clamp-2 mt-3 text-sm text-slate-500 dark:text-slate-400">Save hours every week using these powerful AI tools.</p>
-                        <div class="mt-5 flex justify-between text-sm text-slate-500 dark:text-slate-400"><span>Jul 15, 2026</span><span>5 min</span></div>
+                        <p class="line-clamp-2 mt-3 text-sm text-slate-500 dark:text-slate-400">Save hours every week
+                            using these powerful AI tools.</p>
+                        <div class="mt-5 flex justify-between text-sm text-slate-500 dark:text-slate-400"><span>Jul 15,
+                                2026</span><span>5 min</span></div>
                     </div>
                 </article>
             </div>
@@ -544,7 +487,8 @@
 
         <!-- Responsive Advertisement -->
         <section class="container pb-12 sm:pb-16" aria-label="Advertisement">
-            <div class="ad-slot flex min-h-32 items-center justify-center rounded-2xl bg-slate-200 px-4 text-center text-lg font-bold text-slate-500 dark:bg-darkcard dark:text-slate-400">
+            <div
+                class="ad-slot flex min-h-32 items-center justify-center rounded-2xl bg-slate-200 px-4 text-center text-lg font-bold text-slate-500 dark:bg-darkcard dark:text-slate-400">
                 Responsive Google AdSense / Auto Ads Area
             </div>
         </section>
@@ -556,69 +500,102 @@
                     <div class="mb-8">
                         <span class="font-semibold uppercase tracking-widest text-blue-600">Latest</span>
                         <h2 id="latest-title" class="mt-2 text-3xl font-extrabold sm:text-4xl">Latest Articles</h2>
-                        <p class="mt-2 text-slate-500 dark:text-slate-400">Fresh news, tutorials and technology updates.</p>
+                        <p class="mt-2 text-slate-500 dark:text-slate-400">Fresh news, tutorials and technology updates.
+                        </p>
                     </div>
 
-                    <div id="searchMessage" class="mb-6 hidden rounded-xl border border-blue-200 bg-blue-50 p-4 text-blue-800 dark:border-blue-900 dark:bg-blue-950/50 dark:text-blue-200" role="status"></div>
+                    <div id="searchMessage"
+                        class="mb-6 hidden rounded-xl border border-blue-200 bg-blue-50 p-4 text-blue-800 dark:border-blue-900 dark:bg-blue-950/50 dark:text-blue-200"
+                        role="status"></div>
 
                     <div class="space-y-7">
-                        <article data-search-card class="overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
+                        <article data-search-card
+                            class="overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
                             <div class="md:flex">
                                 <div class="md:w-2/5">
-                                    <img src="https://picsum.photos/700/500?random=31" alt="Laravel web development workspace"
-                                        width="700" height="500" loading="lazy" class="h-60 w-full object-cover md:h-full md:min-h-[330px]">
+                                    <img src="https://picsum.photos/700/500?random=31"
+                                        alt="Laravel web development workspace" width="700" height="500" loading="lazy"
+                                        class="h-60 w-full object-cover md:h-full md:min-h-[330px]">
                                 </div>
                                 <div class="p-6 sm:p-8 md:w-3/5">
-                                    <span class="inline-block rounded-full bg-blue-600 px-4 py-1 text-xs text-white">Technology</span>
-                                    <h3 class="mt-4 text-2xl font-bold leading-tight">Why Laravel Is Still the Best PHP Framework in 2026</h3>
-                                    <p class="mt-4 leading-7 text-slate-500 dark:text-slate-400">Laravel continues to dominate modern web development thanks to elegant syntax, security, scalability and a massive ecosystem.</p>
-                                    <div class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
-                                        <span>👤 John Smith</span><span>📅 Jul 18, 2026</span><span>⏱ 8 min</span><span>👁 18.4K</span>
+                                    <span
+                                        class="inline-block rounded-full bg-blue-600 px-4 py-1 text-xs text-white">Technology</span>
+                                    <h3 class="mt-4 text-2xl font-bold leading-tight">Why Laravel Is Still the Best PHP
+                                        Framework in 2026</h3>
+                                    <p class="mt-4 leading-7 text-slate-500 dark:text-slate-400">Laravel continues to
+                                        dominate modern web development thanks to elegant syntax, security, scalability
+                                        and a massive ecosystem.</p>
+                                    <div
+                                        class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
+                                        <span>👤 John Smith</span><span>📅 Jul 18, 2026</span><span>⏱ 8
+                                            min</span><span>👁 18.4K</span>
                                     </div>
-                                    <a href="#" class="mt-6 inline-block rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700">Read More →</a>
+                                    <a href="#"
+                                        class="mt-6 inline-block rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700">Read
+                                        More →</a>
                                 </div>
                             </div>
                         </article>
 
-                        <article data-search-card id="health" class="overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
+                        <article data-search-card id="health"
+                            class="overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
                             <div class="md:flex">
                                 <div class="md:w-2/5">
-                                    <img src="https://picsum.photos/700/500?random=32" alt="Healthy exercise and wellness article"
-                                        width="700" height="500" loading="lazy" class="h-60 w-full object-cover md:h-full md:min-h-[330px]">
+                                    <img src="https://picsum.photos/700/500?random=32"
+                                        alt="Healthy exercise and wellness article" width="700" height="500"
+                                        loading="lazy" class="h-60 w-full object-cover md:h-full md:min-h-[330px]">
                                 </div>
                                 <div class="p-6 sm:p-8 md:w-3/5">
-                                    <span class="inline-block rounded-full bg-green-600 px-4 py-1 text-xs text-white">Health</span>
-                                    <h3 class="mt-4 text-2xl font-bold leading-tight">Pelvic Floor Exercises Every Woman Should Know</h3>
-                                    <p class="mt-4 leading-7 text-slate-500 dark:text-slate-400">Learn how pelvic floor exercises improve strength, reduce pain and support overall pelvic health.</p>
-                                    <div class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
-                                        <span>👤 Sarah Johnson</span><span>📅 Jul 17, 2026</span><span>⏱ 7 min</span><span>👁 13.7K</span>
+                                    <span
+                                        class="inline-block rounded-full bg-green-600 px-4 py-1 text-xs text-white">Health</span>
+                                    <h3 class="mt-4 text-2xl font-bold leading-tight">Pelvic Floor Exercises Every Woman
+                                        Should Know</h3>
+                                    <p class="mt-4 leading-7 text-slate-500 dark:text-slate-400">Learn how pelvic floor
+                                        exercises improve strength, reduce pain and support overall pelvic health.</p>
+                                    <div
+                                        class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
+                                        <span>👤 Sarah Johnson</span><span>📅 Jul 17, 2026</span><span>⏱ 7
+                                            min</span><span>👁 13.7K</span>
                                     </div>
-                                    <a href="#" class="mt-6 inline-block rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700">Read More →</a>
+                                    <a href="#"
+                                        class="mt-6 inline-block rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700">Read
+                                        More →</a>
                                 </div>
                             </div>
                         </article>
 
-                        <article data-search-card id="seo" class="overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
+                        <article data-search-card id="seo"
+                            class="overflow-hidden rounded-2xl bg-white shadow-soft hover-lift dark:bg-darkcard">
                             <div class="md:flex">
                                 <div class="md:w-2/5">
-                                    <img src="https://picsum.photos/700/500?random=33" alt="SEO checklist and analytics article"
-                                        width="700" height="500" loading="lazy" class="h-60 w-full object-cover md:h-full md:min-h-[330px]">
+                                    <img src="https://picsum.photos/700/500?random=33"
+                                        alt="SEO checklist and analytics article" width="700" height="500"
+                                        loading="lazy" class="h-60 w-full object-cover md:h-full md:min-h-[330px]">
                                 </div>
                                 <div class="p-6 sm:p-8 md:w-3/5">
-                                    <span class="inline-block rounded-full bg-purple-600 px-4 py-1 text-xs text-white">SEO</span>
-                                    <h3 class="mt-4 text-2xl font-bold leading-tight">Complete On-Page SEO Checklist for Higher Rankings</h3>
-                                    <p class="mt-4 leading-7 text-slate-500 dark:text-slate-400">Improve your Google rankings using title tags, schema markup, internal links, page speed and content optimization.</p>
-                                    <div class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
-                                        <span>👤 Michael Lee</span><span>📅 Jul 16, 2026</span><span>⏱ 9 min</span><span>👁 22.9K</span>
+                                    <span
+                                        class="inline-block rounded-full bg-purple-600 px-4 py-1 text-xs text-white">SEO</span>
+                                    <h3 class="mt-4 text-2xl font-bold leading-tight">Complete On-Page SEO Checklist for
+                                        Higher Rankings</h3>
+                                    <p class="mt-4 leading-7 text-slate-500 dark:text-slate-400">Improve your Google
+                                        rankings using title tags, schema markup, internal links, page speed and content
+                                        optimization.</p>
+                                    <div
+                                        class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
+                                        <span>👤 Michael Lee</span><span>📅 Jul 16, 2026</span><span>⏱ 9
+                                            min</span><span>👁 22.9K</span>
                                     </div>
-                                    <a href="#" class="mt-6 inline-block rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700">Read More →</a>
+                                    <a href="#"
+                                        class="mt-6 inline-block rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700">Read
+                                        More →</a>
                                 </div>
                             </div>
                         </article>
                     </div>
 
                     <div class="mt-9 flex justify-center">
-                        <button type="button" class="rounded-xl border border-slate-300 bg-white px-7 py-3 font-semibold transition hover:border-primary hover:text-primary dark:border-slate-600 dark:bg-darkcard">
+                        <button type="button"
+                            class="rounded-xl border border-slate-300 bg-white px-7 py-3 font-semibold transition hover:border-primary hover:text-primary dark:border-slate-600 dark:bg-darkcard">
                             Load More Articles
                         </button>
                     </div>
@@ -628,31 +605,39 @@
                 <aside class="space-y-7 lg:col-span-4" aria-label="Blog sidebar">
                     <section class="rounded-2xl bg-white p-6 shadow-soft dark:bg-darkcard">
                         <h2 class="text-xl font-bold">About TechBlog</h2>
-                        <p class="mt-3 leading-7 text-slate-500 dark:text-slate-400">Practical tutorials, honest reviews and actionable insights about technology, AI, SEO, health and business.</p>
-                        <a href="#" class="mt-4 inline-block font-semibold text-primary hover:underline">Learn more →</a>
+                        <p class="mt-3 leading-7 text-slate-500 dark:text-slate-400">Practical tutorials, honest reviews
+                            and actionable insights about technology, AI, SEO, health and business.</p>
+                        <a href="#" class="mt-4 inline-block font-semibold text-primary hover:underline">Learn more
+                            →</a>
                     </section>
 
                     <section class="rounded-2xl bg-white p-6 shadow-soft dark:bg-darkcard">
                         <h2 class="text-xl font-bold">Popular Posts</h2>
                         <div class="mt-5 space-y-5">
                             <a href="#" class="group flex gap-4">
-                                <img src="https://picsum.photos/160/120?random=51" alt="" width="160" height="120" loading="lazy" class="h-20 w-24 shrink-0 rounded-xl object-cover">
+                                <img src="https://picsum.photos/160/120?random=51" alt="" width="160" height="120"
+                                    loading="lazy" class="h-20 w-24 shrink-0 rounded-xl object-cover">
                                 <div>
-                                    <h3 class="line-clamp-2 font-bold leading-5 group-hover:text-primary">How AI Is Changing Content Marketing</h3>
+                                    <h3 class="line-clamp-2 font-bold leading-5 group-hover:text-primary">How AI Is
+                                        Changing Content Marketing</h3>
                                     <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">July 18, 2026</p>
                                 </div>
                             </a>
                             <a href="#" class="group flex gap-4">
-                                <img src="https://picsum.photos/160/120?random=52" alt="" width="160" height="120" loading="lazy" class="h-20 w-24 shrink-0 rounded-xl object-cover">
+                                <img src="https://picsum.photos/160/120?random=52" alt="" width="160" height="120"
+                                    loading="lazy" class="h-20 w-24 shrink-0 rounded-xl object-cover">
                                 <div>
-                                    <h3 class="line-clamp-2 font-bold leading-5 group-hover:text-primary">The Ultimate Technical SEO Audit Guide</h3>
+                                    <h3 class="line-clamp-2 font-bold leading-5 group-hover:text-primary">The Ultimate
+                                        Technical SEO Audit Guide</h3>
                                     <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">July 16, 2026</p>
                                 </div>
                             </a>
                             <a href="#" class="group flex gap-4">
-                                <img src="https://picsum.photos/160/120?random=53" alt="" width="160" height="120" loading="lazy" class="h-20 w-24 shrink-0 rounded-xl object-cover">
+                                <img src="https://picsum.photos/160/120?random=53" alt="" width="160" height="120"
+                                    loading="lazy" class="h-20 w-24 shrink-0 rounded-xl object-cover">
                                 <div>
-                                    <h3 class="line-clamp-2 font-bold leading-5 group-hover:text-primary">Simple Habits for Better Daily Productivity</h3>
+                                    <h3 class="line-clamp-2 font-bold leading-5 group-hover:text-primary">Simple Habits
+                                        for Better Daily Productivity</h3>
                                     <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">July 14, 2026</p>
                                 </div>
                             </a>
@@ -662,27 +647,42 @@
                     <section class="rounded-2xl bg-white p-6 shadow-soft dark:bg-darkcard">
                         <h2 class="text-xl font-bold">Categories</h2>
                         <ul class="mt-4 space-y-3 text-slate-600 dark:text-slate-300">
-                            <li><a href="#technology" class="flex justify-between rounded-lg px-3 py-2 hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800"><span>Technology</span><span>24</span></a></li>
-                            <li><a href="#ai" class="flex justify-between rounded-lg px-3 py-2 hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800"><span>Artificial Intelligence</span><span>18</span></a></li>
-                            <li><a href="#seo" class="flex justify-between rounded-lg px-3 py-2 hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800"><span>SEO</span><span>16</span></a></li>
-                            <li><a href="#business" class="flex justify-between rounded-lg px-3 py-2 hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800"><span>Business</span><span>12</span></a></li>
-                            <li><a href="#health" class="flex justify-between rounded-lg px-3 py-2 hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800"><span>Health</span><span>10</span></a></li>
+                            <li><a href="#technology"
+                                    class="flex justify-between rounded-lg px-3 py-2 hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800"><span>Technology</span><span>24</span></a>
+                            </li>
+                            <li><a href="#ai"
+                                    class="flex justify-between rounded-lg px-3 py-2 hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800"><span>Artificial
+                                        Intelligence</span><span>18</span></a></li>
+                            <li><a href="#seo"
+                                    class="flex justify-between rounded-lg px-3 py-2 hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800"><span>SEO</span><span>16</span></a>
+                            </li>
+                            <li><a href="#business"
+                                    class="flex justify-between rounded-lg px-3 py-2 hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800"><span>Business</span><span>12</span></a>
+                            </li>
+                            <li><a href="#health"
+                                    class="flex justify-between rounded-lg px-3 py-2 hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800"><span>Health</span><span>10</span></a>
+                            </li>
                         </ul>
                     </section>
 
-                    <section class="rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 p-6 text-white shadow-soft">
+                    <section
+                        class="rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 p-6 text-white shadow-soft">
                         <h2 class="text-2xl font-extrabold">Weekly Newsletter</h2>
                         <p class="mt-2 text-blue-100">Get our best tutorials and insights directly in your inbox.</p>
                         <form id="newsletterForm" class="mt-5 space-y-3">
                             <label for="newsletterEmail" class="sr-only">Email address</label>
                             <input id="newsletterEmail" type="email" required placeholder="Your email address"
                                 class="w-full rounded-xl border border-white/30 bg-white px-4 py-3 text-slate-900 outline-none focus:ring-4 focus:ring-white/20">
-                            <button type="submit" class="w-full rounded-xl bg-slate-950 px-4 py-3 font-bold transition hover:bg-black">Subscribe Now</button>
+                            <button type="submit"
+                                class="w-full rounded-xl bg-slate-950 px-4 py-3 font-bold transition hover:bg-black">Subscribe
+                                Now</button>
                         </form>
                         <p id="newsletterMessage" class="mt-3 hidden text-sm" role="status"></p>
                     </section>
 
-                    <section class="ad-slot flex min-h-[300px] items-center justify-center rounded-2xl bg-slate-200 p-5 text-center font-bold text-slate-500 dark:bg-darkcard dark:text-slate-400" aria-label="Advertisement">
+                    <section
+                        class="ad-slot flex min-h-[300px] items-center justify-center rounded-2xl bg-slate-200 p-5 text-center font-bold text-slate-500 dark:bg-darkcard dark:text-slate-400"
+                        aria-label="Advertisement">
                         Sidebar Advertisement · 300 × 300
                     </section>
                 </aside>
@@ -696,17 +696,20 @@
                     <article id="ai" class="rounded-2xl border border-slate-200 p-7 dark:border-slate-700">
                         <span class="text-3xl" aria-hidden="true">🤖</span>
                         <h2 class="mt-4 text-2xl font-bold">Artificial Intelligence</h2>
-                        <p class="mt-3 leading-7 text-slate-500 dark:text-slate-400">Tools, workflows and practical AI strategies for creators and developers.</p>
+                        <p class="mt-3 leading-7 text-slate-500 dark:text-slate-400">Tools, workflows and practical AI
+                            strategies for creators and developers.</p>
                     </article>
                     <article id="education" class="rounded-2xl border border-slate-200 p-7 dark:border-slate-700">
                         <span class="text-3xl" aria-hidden="true">🎓</span>
                         <h2 class="mt-4 text-2xl font-bold">Education</h2>
-                        <p class="mt-3 leading-7 text-slate-500 dark:text-slate-400">Clear learning resources and step-by-step guides for modern skills.</p>
+                        <p class="mt-3 leading-7 text-slate-500 dark:text-slate-400">Clear learning resources and
+                            step-by-step guides for modern skills.</p>
                     </article>
                     <article id="lifestyle" class="rounded-2xl border border-slate-200 p-7 dark:border-slate-700">
                         <span class="text-3xl" aria-hidden="true">🌿</span>
                         <h2 class="mt-4 text-2xl font-bold">Lifestyle</h2>
-                        <p class="mt-3 leading-7 text-slate-500 dark:text-slate-400">Simple ideas for productivity, wellbeing and a more balanced life.</p>
+                        <p class="mt-3 leading-7 text-slate-500 dark:text-slate-400">Simple ideas for productivity,
+                            wellbeing and a more balanced life.</p>
                     </article>
                 </div>
             </div>
@@ -719,7 +722,8 @@
             <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
                 <div>
                     <a href="#" class="text-3xl font-extrabold text-white">TechBlog</a>
-                    <p class="mt-4 max-w-sm leading-7 text-slate-400">A modern publication covering technology, AI, SEO, health, business and digital growth.</p>
+                    <p class="mt-4 max-w-sm leading-7 text-slate-400">A modern publication covering technology, AI, SEO,
+                        health, business and digital growth.</p>
                     <div class="mt-5 flex flex-wrap gap-3">
                         <a href="#" class="rounded-lg bg-white/10 px-3 py-2 hover:bg-blue-600">Facebook</a>
                         <a href="#" class="rounded-lg bg-white/10 px-3 py-2 hover:bg-blue-600">Twitter</a>
@@ -759,7 +763,8 @@
         </div>
 
         <div class="border-t border-slate-700">
-            <div class="container flex flex-col gap-3 py-5 text-center text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+            <div
+                class="container flex flex-col gap-3 py-5 text-center text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:text-left">
                 <p>© <span id="currentYear"></span> TechBlog. All rights reserved.</p>
                 <div class="flex justify-center gap-5 sm:justify-end">
                     <a href="#" class="hover:text-white">Privacy Policy</a>
@@ -774,152 +779,7 @@
         class="fixed bottom-5 right-5 z-40 hidden h-12 w-12 items-center justify-center rounded-full bg-primary text-xl text-white shadow-lg transition hover:bg-secondary focus:outline-none focus:ring-4 focus:ring-blue-300"
         aria-label="Back to top">↑</button>
 
-    <script>
-        'use strict';
 
-        const root = document.documentElement;
-        const darkToggle = document.getElementById('darkToggle');
-        const darkIcon = document.getElementById('darkIcon');
-        const menuBtn = document.getElementById('menuBtn');
-        const menuIcon = document.getElementById('menuIcon');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileTechnologyBtn = document.getElementById('mobileTechnologyBtn');
-        const mobileTechnologyMenu = document.getElementById('mobileTechnologyMenu');
-        const mobileTechnologyIcon = document.getElementById('mobileTechnologyIcon');
-        const backToTop = document.getElementById('backToTop');
-        const headerSearchForm = document.getElementById('headerSearchForm');
-        const headerSearch = document.getElementById('headerSearch');
-        const mobileSearchForm = document.getElementById('mobileSearchForm');
-        const mobileSearch = document.getElementById('mobileSearch');
-        const searchMessage = document.getElementById('searchMessage');
-        const newsletterForm = document.getElementById('newsletterForm');
-        const newsletterEmail = document.getElementById('newsletterEmail');
-        const newsletterMessage = document.getElementById('newsletterMessage');
-        const searchableCards = Array.from(document.querySelectorAll('[data-search-card]'));
-
-        function updateThemeButton() {
-            const isDark = root.classList.contains('dark');
-            darkIcon.textContent = isDark ? '☀️' : '🌙';
-            darkToggle.setAttribute('aria-pressed', String(isDark));
-            darkToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-        }
-
-        function closeMobileMenu() {
-            mobileMenu.classList.remove('active');
-            menuBtn.setAttribute('aria-expanded', 'false');
-            menuIcon.textContent = '☰';
-            document.body.classList.remove('overflow-hidden');
-        }
-
-        function runSearch(rawQuery) {
-            const query = rawQuery.trim().toLowerCase();
-            let visibleCount = 0;
-
-            searchableCards.forEach((card) => {
-                const matches = !query || card.textContent.toLowerCase().includes(query);
-                card.classList.toggle('search-result-hidden', !matches);
-                if (matches) visibleCount += 1;
-            });
-
-            searchMessage.classList.remove('hidden');
-            if (!query) {
-                searchMessage.textContent = 'Showing all articles.';
-            } else if (visibleCount > 0) {
-                searchMessage.textContent = `${visibleCount} article${visibleCount === 1 ? '' : 's'} found for “${rawQuery.trim()}”.`;
-            } else {
-                searchMessage.textContent = `No articles found for “${rawQuery.trim()}”. Try another keyword.`;
-            }
-
-            document.getElementById('latest').scrollIntoView({ behavior: 'smooth', block: 'start' });
-            closeMobileMenu();
-        }
-
-        updateThemeButton();
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        darkToggle.addEventListener('click', () => {
-            root.classList.toggle('dark');
-            try {
-                localStorage.setItem('techblog-theme', root.classList.contains('dark') ? 'dark' : 'light');
-            } catch (error) {
-                console.warn('Theme preference could not be saved.', error);
-            }
-            updateThemeButton();
-        });
-
-        menuBtn.addEventListener('click', () => {
-            const isOpen = mobileMenu.classList.toggle('active');
-            menuBtn.setAttribute('aria-expanded', String(isOpen));
-            menuIcon.textContent = isOpen ? '✕' : '☰';
-            document.body.classList.toggle('overflow-hidden', isOpen);
-        });
-
-        mobileTechnologyBtn.addEventListener('click', () => {
-            const isOpen = mobileTechnologyMenu.classList.toggle('active');
-            mobileTechnologyBtn.setAttribute('aria-expanded', String(isOpen));
-            mobileTechnologyIcon.textContent = isOpen ? '−' : '＋';
-        });
-
-        mobileMenu.querySelectorAll('a').forEach((link) => {
-            link.addEventListener('click', closeMobileMenu);
-        });
-
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 1024) closeMobileMenu();
-        });
-
-        window.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape') closeMobileMenu();
-        });
-
-        headerSearchForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            runSearch(headerSearch.value);
-        });
-
-        mobileSearchForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            headerSearch.value = mobileSearch.value;
-            runSearch(mobileSearch.value);
-        });
-
-        document.querySelectorAll('[data-heart]').forEach((button) => {
-            button.addEventListener('click', () => {
-                const isActive = button.classList.toggle('heart-active');
-                button.textContent = isActive ? '♥' : '♡';
-                button.setAttribute('aria-pressed', String(isActive));
-                button.setAttribute('aria-label', isActive ? 'Remove article from favorites' : 'Add article to favorites');
-            });
-        });
-
-        document.querySelectorAll('[data-bookmark]').forEach((button) => {
-            button.addEventListener('click', () => {
-                const isActive = button.getAttribute('aria-pressed') !== 'true';
-                button.setAttribute('aria-pressed', String(isActive));
-                button.textContent = isActive ? '✓ Bookmarked' : '🔖 Bookmark';
-            });
-        });
-
-        newsletterForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            if (!newsletterEmail.checkValidity()) {
-                newsletterEmail.reportValidity();
-                return;
-            }
-            newsletterMessage.textContent = 'Thank you! Your subscription has been received.';
-            newsletterMessage.classList.remove('hidden');
-            newsletterForm.reset();
-        });
-
-        window.addEventListener('scroll', () => {
-            const showButton = window.scrollY > 500;
-            backToTop.classList.toggle('hidden', !showButton);
-            backToTop.classList.toggle('flex', showButton);
-        }, { passive: true });
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
 </body>
+
 </html>
